@@ -1,0 +1,490 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+:root {
+  --primary: #2e4053;
+  --bg: #d0d3d4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+/*navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 7%;
+  background-color: rgba(46, 64, 83, 0.62);
+  border-bottom: 1px solid var(--bg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.as {
+  display: none;
+}
+
+.navbar .navbar__container h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: var(--bg);
+}
+
+.navbar .navbar__toggle a {
+  color: var(--bg);
+  font-size: 1rem;
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/latar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, var(--bg) 8%, rgba(255, 255, 255, 0) 10%);
+}
+
+.hero .hero-content {
+  padding: 1.4rem 7%;
+  max-width: 45rem;
+}
+
+.hero .hero-content h1 {
+  font-size: 2.2em;
+  color: #000000;
+  text-shadow: 1px 1px 3px black;
+  line-height: 1;
+}
+
+.hero .hero-content .start {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  color: black;
+  background-color: var(--bg);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.hero .hero-content a:hover {
+  background-color: black;
+  background: linear-gradient(to right, #d0d3d4 15%, #d4ac0d 85%);
+  color: transparent;
+  animation: slide 30s linear infinite;
+  background-clip: text
+}
+
+@keyframes slide {
+  to {background-position: 100rem}
+}
+
+.about {
+  padding: 2rem 6rem;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, var(--bg), #e5e7e9 5%);
+  /*max-width: 60%;*/
+}
+
+.footer {
+  padding: 1rem 6rem 4rem 6rem;
+  margin-top: 2rem;
+  font-family: "Poppins", sans-serif;
+  justify-content: space-between;
+  /*border-bottom: 1px solid var(--primary);*/
+}
+
+.footer .fjl {
+  font-size: 3em;
+  color: #000000;
+  line-height: 1;
+  float: left;
+  /*justify-content: space-between;*/
+}
+
+.footer .ftl {
+  /*padding:  0;*/
+}
+
+.footer .ftl .ftl-c {
+  margin-left: 55rem;
+}
+
+.footer .ftl .ftl-c p {
+  padding: 3px 0;
+}
+
+.footer .ftl .ftl-c p a {
+  color: #000000;
+  display: grid;
+  padding: 3px 0;
+}
+
+.footer-c {
+  background-color: #e5e7e9;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*background-color: var(--bg);*/
+}
+
+.keatas {
+  /*display: flex;*/
+  position: fixed;
+  display: right;
+}
+
+
+
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .hero {
+    min-height: 80vh;
+    justify-content: center;
+  }
+
+  .as {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 7%;
+    position: relative;
+    margin-top: 5rem;
+  }
+
+  .as a {
+    color: var(--primary);
+    gap: 1rem;
+    padding: 0 1rem;
+    display: inline-block;
+    border-bottom: 1px solid #2e4053;
+  }
+
+  .as::after {
+    background: linear-gradient(180deg, var(--bg), #e5e7e9 5%);
+  }
+
+  .about {
+  padding: 2rem 1rem;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    position: fixed;
+  }
+
+  .navbar .navbar__container {
+    font-size: 3rem !important;
+  }
+
+  .navbar .navbar__toggle {
+    display: none;
+  }
+
+  .footer .ftl .ftl-c {
+    font-size: 10px;
+    margin-left: 12rem;
+  }
+
+}
+
+/*.navbar .navbar__toggle a {*/
+/*  color: var(--bg);*/
+/*  display: inline-block;*/
+/*  font-size: 1.3rem;*/
+/*  margin: 0 1rem;*/
+/*}*/
+/*.navbar .navbar--toggle a:hover {*/
+/*  color: #000000;*/
+/*}*/
+/*.navbar .navbar__toggle a:after {*/
+/*  content: "";*/
+/*  display: block;*/
+/*  padding-bottom: 0.5rem;*/
+/*  border-bottom: 0.1rem solid #17202a ;*/
+/*  transform: scaleX(0);*/
+/*  transition: 0.2s linear;*/
+/*}*/
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .navbar .nabvar__tonggle {
+    display: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
