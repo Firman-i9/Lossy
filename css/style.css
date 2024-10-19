@@ -220,9 +220,10 @@ body {
   .scroll {
     /*width: 3rem;*/
     /*border-radius: 50%;*/
-    right: 1.5rem;
+    right: 2rem;
     background: none;
-    /*bottom: 2rem;*/
+    bottom: 2rem;
+    /*font-size: 10rem;*/
   }
 
   .scroll a {
