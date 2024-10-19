@@ -71,6 +71,23 @@ body {
   display: inline-block;
 }
 
+.navbar .navbar__toggle a:hover {
+  color: #d4ac0d;
+}
+
+.navbar .navbar__toggle a::after {
+  content: "";
+  display: block;
+  padding-bottom: 4px ;
+  border-bottom: 0.1rem solid var(--bg);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar__toggle a:hover::after {
+  transform: scaleX(0.5);
+}
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -129,11 +146,10 @@ body {
 }
 
 .about {
-  padding: 2rem 6rem;
+  padding: 2rem 30rem 0 6rem;
   font-size: 1.3rem;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(180deg, var(--bg), #e5e7e9 5%);
-  /*max-width: 60%;*/
 }
 
 .footer {
@@ -157,7 +173,7 @@ body {
 }
 
 .footer .ftl .ftl-c {
-  margin-left: 55rem;
+  margin-left: 59rem;
 }
 
 .footer .ftl .ftl-c p {
@@ -179,13 +195,6 @@ body {
   /*background-color: var(--bg);*/
 }
 
-.keatas {
-  /*display: flex;*/
-  position: fixed;
-  display: right;
-}
-
-
 
 @media (max-width: 758px) {
   html {
@@ -206,20 +215,41 @@ body {
     margin-top: 5rem;
   }
 
-  .as a {
+  .as .asa a {
     color: var(--primary);
-    gap: 1rem;
-    padding: 0 1rem;
+    /*gap: 1rem;*/
+    margin: 0 1rem;
     display: inline-block;
-    border-bottom: 1px solid #2e4053;
+    /*border-bottom: 1px solid #2e4053;*/
   }
 
-  .as::after {
-    background: linear-gradient(180deg, var(--bg), #e5e7e9 5%);
+  .as .asa a:hover {
+    content: "";
+  }
+
+  .as .asa a::after {
+    content: "";
+    display: block;
+    padding-bottom: 2px ;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+
+  .as .asa a:hover::after {
+    transform: scaleX(0.5);
   }
 
   .about {
   padding: 2rem 1rem;
+  }
+
+  .about .about-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .about .about-content p {
+    font-size: 1.7rem;
   }
 
   .navbar {
@@ -238,9 +268,15 @@ body {
     display: none;
   }
 
+  /*.footer {*/
+  /*  display: flex;*/
+  /*  justify-content: center;*/
+  /*  align-items: center;*/
+  /*  margin-left: 0;*/
+  /*}*/
   .footer .ftl .ftl-c {
     font-size: 10px;
-    margin-left: 12rem;
+    margin-left: 14.5rem;
   }
 
 }
