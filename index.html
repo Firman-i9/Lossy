@@ -18,7 +18,7 @@
   <link rel="icon" href="img/favicon_io/favicon-16x16.png" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon_io/apple-touch-icon.png">
 
-  <link rel="manifest" href="site.webmanifest">
+<!--  <link rel="manifest" href="site.webmanifest">-->
   <meta name="theme-color" content="#fafafa">
 
 <!--  style-->
@@ -31,9 +31,14 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
     rel="stylesheet"
   />
+
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
+  <div class="scroll">
+    <a href="#"><i data-feather="arrow-up-circle"></i></a>
+  </div>
 <!--navbar-->
   <nav>
     <div class="navbar">
@@ -68,17 +73,17 @@
   <section id="about" style="background: #e5e7e9">
     <div class="about">
       <div class="about-content">
-        <h1 style="padding-bottom: 10px">Apa itu Project <span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text">Lossy</span> ?</h1>
+        <h1 style="padding-bottom: 10px"><strong>Apa itu Project <span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text">Lossy</span> ?</strong></h1>
         <p style="padding-bottom: 30px"><q><span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text"><strong>Lossy</strong></span></q> adalah sebuah project streaming anime yang menyediakan berbagai anime dari berbagai genre. Dengan <span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text"><strong>Lossy</strong></span>,
             pengguna dapat menikmati anime favorit mereka kapan saja dan di mana saja.
         </p>
       </div>
       <div class="about-content">
-        <h1 style="padding-bottom: 10px">Keunggulan Project <span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text">Lossy</span></h1>
+        <h1 style="padding-bottom: 10px"><strong>Keunggulan Project <span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text">Lossy</span></strong></h1>
         <p style="padding-bottom: 30px"><span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text"><strong>Lossy</strong></span> menawarkan fitur streaming anime tanpa adanya iklan, sehingga pengguna dapat memiliki pengalaman menonton anime dengan nyaman dan bebas dari gangguan iklan.</p>
       </div>
       <div class="about-content">
-        <h1 style="padding-bottom: 10px">Akses gratis pada Project <span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text">Lossy</span></h1>
+        <h1 style="padding-bottom: 10px"><strong>Akses gratis pada Project <span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text">Lossy</span></strong></h1>
         <p style="padding-bottom: 30px"><span style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text"><strong>Lossy</strong></span> menawarkan layanan streaming anime gratis untuk semua pengguna tanpa harus melakukan langganan atau subcribe.</p>
       </div>
     </div>
@@ -86,8 +91,8 @@
 
   <section id="contact">
     <div class="footer">
-      <div class="fjl" style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text">
-        <strong>Lossy</strong>
+      <div class="fjl">
+        <a href=".#" style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text"><strong>Lossy</strong></a>
       </div>
       <div class="ftl">
         <div class="ftl-c">
@@ -103,12 +108,15 @@
 
   <footer>
     <div class="footer-c">
-      <p><strong>&copy; 2024 Lossy. All right received</strong></p>
+      <p><strong>&copy; 2024 Lossy. All right reserved</strong></p>
     </div>
 <!--    <div class="keatas">-->
 <!--      <img src="icon.png">-->
 <!--    </div>-->
   </footer>
 
+  <script>
+    feather.replace();
+  </script>
 </body>
 </html>

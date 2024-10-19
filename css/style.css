@@ -30,6 +30,7 @@ html {
 
 body {
   background-color: var(--bg);
+  font-family: "Poppins", sans-serif;
 }
 
 /*
@@ -51,7 +52,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 99;
 }
 
 .as {
@@ -127,18 +128,19 @@ body {
   display: inline-block;
   padding: 10px 30px;
   font-size: 1.2rem;
-  color: black;
-  background-color: var(--bg);
+  color: #ffffff;
+  background-color: rgba(34, 40, 49, 0.8);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
 .hero .hero-content a:hover {
   background-color: black;
-  background: linear-gradient(to right, #d0d3d4 15%, #d4ac0d 85%);
+  background: linear-gradient(270deg, #d0d3d4 15%, #d4ac0d 85%, #d0d3d4, #d4ac0d);
   color: transparent;
-  animation: slide 30s linear infinite;
-  background-clip: text
+  animation: slide 10s linear infinite;
+  background-clip: text;
+  transform: scale(1.11);
 }
 
 @keyframes slide {
@@ -195,15 +197,42 @@ body {
   /*background-color: var(--bg);*/
 }
 
+.scroll {
+  position: fixed;
+  right: 5rem;
+  bottom: 5px;
+  z-index: 9999;
+  background: rgba(46, 64, 83, 0.7);
+  /*width: 10rem;*/
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.scroll a {
+  color: #000000;
+}
 
 @media (max-width: 758px) {
   html {
     font-size: 62.5%;
   }
 
+  .scroll {
+    /*width: 3rem;*/
+    /*border-radius: 50%;*/
+    right: 1.5rem;
+    background: none;
+    /*bottom: 2rem;*/
+  }
+
+  .scroll a {
+    color: var(--primary);
+  }
+
   .hero {
-    min-height: 80vh;
+    /*min-height: 80vh;*/
     justify-content: center;
+    /*line-height: 3rem;*/
   }
 
   .as {
@@ -241,7 +270,7 @@ body {
   }
 
   .about {
-  padding: 2rem 1rem;
+  padding: 2rem 2.8rem 0 1rem;
   }
 
   .about .about-content h1 {
@@ -249,14 +278,14 @@ body {
   }
 
   .about .about-content p {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 
   .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
+    background-color: rgba(46, 64, 83, 0.98);
     position: fixed;
   }
 
@@ -276,7 +305,7 @@ body {
   /*}*/
   .footer .ftl .ftl-c {
     font-size: 10px;
-    margin-left: 14.5rem;
+    margin-left: 17rem;
   }
 
 }
