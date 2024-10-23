@@ -1,15 +1,3 @@
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
 :root {
   --primary: #2e4053;
   --bg: #d0d3d4;
@@ -33,20 +21,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
 /*navbar*/
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 7%;
-  background-color: rgba(46, 64, 83, 0.62);
+  background-color: rgb(46, 64, 83);
   border-bottom: 1px solid var(--bg);
   position: absolute;
   top: 0;
@@ -89,6 +70,7 @@ body {
   transform: scaleX(0.5);
 }
 
+/*home*/
 .hero {
   min-height: 100vh;
   display: flex;
@@ -154,12 +136,119 @@ body {
   background: linear-gradient(180deg, var(--bg), #e5e7e9 5%);
 }
 
+/*content*/
+.container {
+  width: 80%;
+  margin: 100px 20px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.player {
+  margin-top: 20px;
+}
+
+.episode-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.episode-select select {
+  padding: 5px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.episode-select button {
+  padding: 5px 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.episode-select button:hover {
+  background-color: #0056b3;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  /* background-color: #000; */
+  /* background-image: url('img/latar.png'); */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.quality-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.quality-buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+}
+
+.quality-buttons button:hover {
+  background-color: #888;
+}
+
+.quality-360p {
+  background-color: #555;
+}
+
+.quality-480p {
+  background-color: #0066cc;
+}
+
+.quality-720p {
+  background-color: #cc3333;
+}
+
+
+/*contact*/
 .footer {
   padding: 1rem 6rem 4rem 6rem;
   margin-top: 2rem;
   font-family: "Poppins", sans-serif;
-  justify-content: space-between;
-  /*border-bottom: 1px solid var(--primary);*/
+  justify-content: space-between; 
 }
 
 .footer .fjl {
@@ -167,11 +256,6 @@ body {
   color: #000000;
   line-height: 1;
   float: left;
-  /*justify-content: space-between;*/
-}
-
-.footer .ftl {
-  /*padding:  0;*/
 }
 
 .footer .ftl .ftl-c {
@@ -188,28 +272,28 @@ body {
   padding: 3px 0;
 }
 
+/*copyright*/
 .footer-c {
   background-color: #e5e7e9;
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /*background-color: var(--bg);*/
 }
 
+/*arrow up*/
 .scroll {
   position: fixed;
   right: 5rem;
   bottom: 5px;
   z-index: 9999;
-  background: rgba(46, 64, 83, 0.7);
-  /*width: 10rem;*/
-  padding: 5px;
-  border-radius: 50%;
+  /*background: rgba(46, 64, 83, 0.7);*/
+  padding: 5px 5px 0 5px;
+  /*border-radius: 5rem;*/
 }
 
 .scroll a {
-  color: #ffffff;
+  color: var(--primary);
 }
 
 @media (max-width: 758px) {
@@ -218,12 +302,9 @@ body {
   }
 
   .scroll {
-    /*width: 3rem;*/
-    /*border-radius: 50%;*/
     right: 2rem;
     background: none;
     bottom: 2rem;
-    /*font-size: 10rem;*/
   }
 
   .scroll a {
@@ -231,9 +312,7 @@ body {
   }
 
   .hero {
-    /*min-height: 80vh;*/
     justify-content: center;
-    /*line-height: 3rem;*/
   }
 
   .as {
@@ -243,14 +322,13 @@ body {
     padding: 1rem 7%;
     position: relative;
     margin-top: 5rem;
+    border-bottom: 1px solid var(--primary);
   }
 
   .as .asa a {
     color: var(--primary);
-    /*gap: 1rem;*/
     margin: 0 1rem;
     display: inline-block;
-    /*border-bottom: 1px solid #2e4053;*/
   }
 
   .as .asa a:hover {
@@ -298,12 +376,6 @@ body {
     display: none;
   }
 
-  /*.footer {*/
-  /*  display: flex;*/
-  /*  justify-content: center;*/
-  /*  align-items: center;*/
-  /*  margin-left: 0;*/
-  /*}*/
   .footer .ftl .ftl-c {
     font-size: 10px;
     margin-left: 17rem;
@@ -329,228 +401,228 @@ body {
 /*  transition: 0.2s linear;*/
 /*}*/
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
+/*::-moz-selection {*/
+/*  background: #b3d4fc;*/
+/*  text-shadow: none;*/
+/*}*/
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
+/*::selection {*/
+/*  background: #b3d4fc;*/
+/*  text-shadow: none;*/
+/*}*/
 
-/*
- * A better looking default horizontal rule
- */
+/*!**/
+/* * A better looking default horizontal rule*/
+/* *!*/
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
+/*hr {*/
+/*  display: block;*/
+/*  height: 1px;*/
+/*  border: 0;*/
+/*  border-top: 1px solid #ccc;*/
+/*  margin: 1em 0;*/
+/*  padding: 0;*/
+/*}*/
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+/*!**/
+/* * Remove the gap between audio, canvas, iframes,*/
+/* * images, videos and the bottom of their containers:*/
+/* * https://github.com/h5bp/html5-boilerplate/issues/440*/
+/* *!*/
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
+/*audio,*/
+/*canvas,*/
+/*iframe,*/
+/*img,*/
+/*svg,*/
+/*video {*/
+/*  vertical-align: middle;*/
+/*}*/
 
-/*
- * Remove default fieldset styles.
- */
+/*!**/
+/* * Remove default fieldset styles.*/
+/* *!*/
 
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
+/*fieldset {*/
+/*  border: 0;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
 
-/*
- * Allow only vertical resizing of textareas.
- */
+/*!**/
+/* * Allow only vertical resizing of textareas.*/
+/* *!*/
 
-textarea {
-  resize: vertical;
-}
+/*textarea {*/
+/*  resize: vertical;*/
+/*}*/
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+/*!* ==========================================================================*/
+/*   Author's custom styles*/
+/*   ========================================================================== *!*/
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
+/*!* ==========================================================================*/
+/*   Helper classes*/
+/*   ========================================================================== *!*/
 
-/*
- * Hide visually and from screen readers
- */
+/*!**/
+/* * Hide visually and from screen readers*/
+/* *!*/
 
-.hidden,
-[hidden] {
-  display: none !important;
-}
+/*.hidden,*/
+/*[hidden] {*/
+/*  display: none !important;*/
+/*}*/
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
+/*!**/
+/* * Hide only visually, but have it available for screen readers:*/
+/* * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility*/
+/* **/
+/* * 1. For long content, line feeds are not interpreted as spaces and small width*/
+/* *    causes content to wrap 1 word per line:*/
+/* *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe*/
+/* *!*/
 
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
+/*.visually-hidden {*/
+/*  border: 0;*/
+/*  clip: rect(0, 0, 0, 0);*/
+/*  height: 1px;*/
+/*  margin: -1px;*/
+/*  overflow: hidden;*/
+/*  padding: 0;*/
+/*  position: absolute;*/
+/*  white-space: nowrap;*/
+/*  width: 1px;*/
+/*  !* 1 *!*/
+/*}*/
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+/*!**/
+/* * Extends the .visually-hidden class to allow the element*/
+/* * to be focusable when navigated to via the keyboard:*/
+/* * https://www.drupal.org/node/897638*/
+/* *!*/
 
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
+/*.visually-hidden.focusable:active,*/
+/*.visually-hidden.focusable:focus {*/
+/*  clip: auto;*/
+/*  height: auto;*/
+/*  margin: 0;*/
+/*  overflow: visible;*/
+/*  position: static;*/
+/*  white-space: inherit;*/
+/*  width: auto;*/
+/*}*/
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
+/*!**/
+/* * Hide visually and from screen readers, but maintain layout*/
+/* *!*/
 
-.invisible {
-  visibility: hidden;
-}
+/*.invisible {*/
+/*  visibility: hidden;*/
+/*}*/
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
+/*!**/
+/* * Clearfix: contain floats*/
+/* **/
+/* * The use of `table` rather than `block` is only necessary if using*/
+/* * `::before` to contain the top-margins of child elements.*/
+/* *!*/
 
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
+/*.clearfix::before,*/
+/*.clearfix::after {*/
+/*  content: "";*/
+/*  display: table;*/
+/*}*/
 
-.clearfix::after {
-  clear: both;
-}
+/*.clearfix::after {*/
+/*  clear: both;*/
+/*}*/
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+/*!* ==========================================================================*/
+/*   EXAMPLE Media Queries for Responsive Design.*/
+/*   These examples override the primary ('mobile first') styles.*/
+/*   Modify as content requires.*/
+/*   ========================================================================== *!*/
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+/*@media only screen and (min-width: 35em) {*/
+/*  !* Style adjustments for viewports that meet the condition *!*/
+/*}*/
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
+/*@media print,*/
+/*  (-webkit-min-device-pixel-ratio: 1.25),*/
+/*  (min-resolution: 1.25dppx),*/
+/*  (min-resolution: 120dpi) {*/
+/*  !* Style adjustments for high resolution devices *!*/
+/*}*/
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+/*!* ==========================================================================*/
+/*   Print styles.*/
+/*   Inlined to avoid the additional HTTP request:*/
+/*   https://www.phpied.com/delay-loading-your-print-css/*/
+/*   ========================================================================== *!*/
 
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
+/*@media print {*/
+/*  *,*/
+/*  *::before,*/
+/*  *::after {*/
+/*    background: #fff !important;*/
+/*    color: #000 !important;*/
+/*    !* Black prints faster *!*/
+/*    box-shadow: none !important;*/
+/*    text-shadow: none !important;*/
+/*  }*/
 
-  .navbar .nabvar__tonggle {
-    display: none !important;
-  }
+/*  .navbar .nabvar__tonggle {*/
+/*    display: none !important;*/
+/*  }*/
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+/*  a,*/
+/*  a:visited {*/
+/*    text-decoration: underline;*/
+/*  }*/
 
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
+/*  a[href]::after {*/
+/*    content: " (" attr(href) ")";*/
+/*  }*/
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
+/*  abbr[title]::after {*/
+/*    content: " (" attr(title) ")";*/
+/*  }*/
 
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
+/*  !**/
+/*   * Don't show links that are fragment identifiers,*/
+/*   * or use the `javascript:` pseudo protocol*/
+/*   *!*/
+/*  a[href^="#"]::after,*/
+/*  a[href^="javascript:"]::after {*/
+/*    content: "";*/
+/*  }*/
 
-  pre {
-    white-space: pre-wrap !important;
-  }
+/*  pre {*/
+/*    white-space: pre-wrap !important;*/
+/*  }*/
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+/*  pre,*/
+/*  blockquote {*/
+/*    border: 1px solid #999;*/
+/*    page-break-inside: avoid;*/
+/*  }*/
 
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
+/*  tr,*/
+/*  img {*/
+/*    page-break-inside: avoid;*/
+/*  }*/
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
+/*  p,*/
+/*  h2,*/
+/*  h3 {*/
+/*    orphans: 3;*/
+/*    widows: 3;*/
+/*  }*/
 
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
+/*  h2,*/
+/*  h3 {*/
+/*    page-break-after: avoid;*/
+/*  }*/
+/*}*/
 
