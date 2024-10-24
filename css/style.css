@@ -393,6 +393,7 @@ body {
 
   .content {
     margin-top: 10px;
+    width: 28rem;
   }
 
   .content .info-judul, .content .info-info {
@@ -429,11 +430,12 @@ body {
   }
 
   .button-s {
-    margin-top: 4px;
+    margin-top: none;
+    border: none;
   }
 
   .button-s button a {
-    font-size: 6px;
+    font-size: 10px;
     padding: 5px;
   }
 
