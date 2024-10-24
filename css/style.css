@@ -137,16 +137,16 @@ body {
 }
 
 /*content*/
-.container {
+.content {
   width: 80%;
-  margin: 100px 20px auto;
+  margin: 100px auto;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.header h1 {
+.content-judul h1 {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
@@ -162,7 +162,7 @@ body {
 
 .episode-select {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   margin-bottom: 10px;
 }
@@ -188,7 +188,7 @@ body {
   background-color: #0056b3;
 }
 
-.video-thumbnail {
+.video-yt {
   position: relative;
   width: 100%;
   height: 0;
@@ -200,23 +200,13 @@ body {
   border-radius: 10px;
 }
 
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  color: white;
-  cursor: pointer;
-}
-
-.quality-buttons {
+.button-s {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.quality-buttons button {
+.button-s button {
   padding: 10px 20px;
   margin: 0 10px;
   border: none;
@@ -226,11 +216,11 @@ body {
   cursor: pointer;
 }
 
-.quality-buttons button:hover {
+.button-s button:hover {
   background-color: #888;
 }
 
-.quality-360p {
+/* .quality-360p {
   background-color: #555;
 }
 
@@ -240,6 +230,20 @@ body {
 
 .quality-720p {
   background-color: #cc3333;
+} */
+
+.content .info-judul {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: var(--primary);
+  border-radius: 3px;
+  color: #ffffff;
+  padding: 5px 0;
+}
+
+.content .info-anime {
+  margin-left: 1.3rem;
 }
 
 
