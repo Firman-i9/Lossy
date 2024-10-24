@@ -252,6 +252,42 @@ body {
   margin-left: 4rem;
 }
 
+.content .info-sinopsis h2, .content .info-off h2 {
+  font-size: 120%;
+}
+
+.content .info-off .info-table {
+  width: 100%;
+  max-width: 51rem;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+.content .info-off .info-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content .info-off .info-table table th, .content .info-off .info-table table td {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid var(--bg);
+}
+
+.content .info-off .info-table table th {
+  background-color: var(--primary);
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#img-anime {
+  max-width: 50px;
+  height: auto;
+  border-radius: 8px;
+}
+
 
 /*contact*/
 .footer {
@@ -437,6 +473,14 @@ body {
   .button-s button a {
     font-size: 10px;
     padding: 5px;
+  }
+
+  .content .info-off .info-table table th, .content .info-off .info-table table td {
+    padding: 3px;
+  }
+
+  #img-anime {
+    max-width: 30px;
   }
 
 }

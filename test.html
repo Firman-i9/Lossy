@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comment Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="comment-section">
+    <h2>Leave a reply</h2>
+    <p>Your email address will not be published. Required fields are marked <span>*</span></p>
+    
+    <form class="comment-form">
+      <textarea name="comment" placeholder="Your Comment..." required></textarea>
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Name *" required>
+        <input type="email" name="email" placeholder="Email *" required>
+        <input type="url" name="website" placeholder="Website">
+      </div>
+      <label class="checkbox">
+        <input type="checkbox" name="notify">
+        Notify me of new posts by email.
+      </label>
+      <button type="submit">Post Comment</button>
+    </form>
+  </div>
+</body>
+</html>
