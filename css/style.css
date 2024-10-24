@@ -192,12 +192,15 @@ body {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  /* background-color: #000; */
-  /* background-image: url('img/latar.png'); */
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
+  padding-bottom: 56.25%;
+}
+
+.video-yt iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .button-s {
@@ -206,7 +209,7 @@ body {
   margin-top: 20px;
 }
 
-.button-s button {
+.button-s button a {
   padding: 10px 20px;
   margin: 0 10px;
   border: none;
@@ -216,11 +219,11 @@ body {
   cursor: pointer;
 }
 
-.button-s button:hover {
+/* .button-s button:hover {
   background-color: #888;
-}
-
-/* .quality-360p {
+} */
+/* 
+.quality-360p {
   background-color: #555;
 }
 
@@ -383,6 +386,17 @@ body {
   .footer .ftl .ftl-c {
     font-size: 10px;
     margin-left: 17rem;
+  }
+
+  .video-yt {
+    padding-bottom: 56.25%; /* Tetap menggunakan rasio 16:9 */
+    max-width: 100%; /* Pastikan kontainer tidak lebih besar dari layar */
+    margin: 0 auto;
+  }
+
+  .video-yt iframe {
+    width: 100%;
+    height: 100%;
   }
 
 }
