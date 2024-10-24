@@ -138,8 +138,9 @@ body {
 
 /*content*/
 .content {
-  width: 80%;
+  width: 60%;
   margin: 100px auto;
+  margin-bottom: 0;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
@@ -161,7 +162,7 @@ body {
 }
 
 .episode-select {
-  display: flex;
+  display: none;
   /* justify-content: space-between; */
   align-items: center;
   margin-bottom: 10px;
@@ -175,7 +176,7 @@ body {
   border-radius: 5px;
 }
 
-.episode-select button {
+/* .episode-select button {
   padding: 5px 10px;
   background-color: #007BFF;
   color: white;
@@ -186,7 +187,7 @@ body {
 
 .episode-select button:hover {
   background-color: #0056b3;
-}
+} */
 
 .video-yt {
   position: relative;
@@ -219,9 +220,9 @@ body {
   cursor: pointer;
 }
 
-/* .button-s button:hover {
+.button-s button a:hover {
   background-color: #888;
-} */
+}
 /* 
 .quality-360p {
   background-color: #555;
@@ -235,7 +236,7 @@ body {
   background-color: #cc3333;
 } */
 
-.content .info-judul {
+.content .info-judul, .content .info-info {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -243,10 +244,11 @@ body {
   border-radius: 3px;
   color: #ffffff;
   padding: 5px 0;
+  font-size: 14px;
 }
 
 .content .info-anime {
-  margin-left: 1.3rem;
+  margin-left: 4rem;
 }
 
 
@@ -388,6 +390,23 @@ body {
     margin-left: 17rem;
   }
 
+  .content {
+    margin-top: 10px;
+  }
+
+  .content .info-judul, .content .info-info {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .content .info-sinopsis {
+    font-size: 10px;
+  }
+
+  .content .info-anime {
+    margin-left: 2rem;
+  }
+
   .video-yt {
     padding-bottom: 56.25%; /* Tetap menggunakan rasio 16:9 */
     max-width: 100%; /* Pastikan kontainer tidak lebih besar dari layar */
@@ -397,6 +416,24 @@ body {
   .video-yt iframe {
     width: 100%;
     height: 100%;
+  }
+
+  .episode-select {
+    margin-bottom: 2px;
+  }
+
+  .episode-select select {
+    font-size: 8.8px;
+    padding: 2px;
+  }
+
+  .button-s {
+    margin-top: 4px;
+  }
+
+  .button-s button a {
+    font-size: 6px;
+    padding: 5px;
   }
 
 }
