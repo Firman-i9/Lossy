@@ -163,7 +163,6 @@ body {
 
 .episode-select {
   display: none;
-  /* justify-content: space-between; */
   align-items: center;
   margin-bottom: 10px;
 }
@@ -175,19 +174,6 @@ body {
   border: none;
   border-radius: 5px;
 }
-
-/* .episode-select button {
-  padding: 5px 10px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.episode-select button:hover {
-  background-color: #0056b3;
-} */
 
 .video-yt {
   position: relative;
@@ -213,7 +199,6 @@ body {
 
 .button-s button a {
   padding: 10px 20px;
-  /* margin: 0 10px; */
   border: none;
   border-radius: 5px;
   background-color: #555;
@@ -222,20 +207,8 @@ body {
 }
 
 .button-s button a:hover {
-  background-color: #888;
+  background-color: #333;
 }
-/* 
-.quality-360p {
-  background-color: #555;
-}
-
-.quality-480p {
-  background-color: #0066cc;
-}
-
-.quality-720p {
-  background-color: #cc3333;
-} */
 
 .content .info-judul, .content .info-info {
   justify-content: center;
@@ -286,6 +259,67 @@ body {
   max-width: 50px;
   height: auto;
   border-radius: 8px;
+}
+
+.comment {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.comment h2 {
+  margin-bottom: 10px;
+}
+
+.comment p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.comment span {
+  color: red;
+}
+
+.comment-isi textarea {
+  width: 98.3%;
+  height: 120px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  resize: none;
+}
+
+.isi {
+  display: flex;
+  width: 101%;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.isi input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+
+.comment-isi button {
+  width: 101%;
+  padding: 10px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment-isi button:hover {
+  background-color: #333;
 }
 
 
@@ -368,7 +402,9 @@ body {
     padding: 1rem 7%;
     position: relative;
     margin-top: 5rem;
-    border-bottom: 1px solid var(--primary);
+    /* border-bottom: 1px solid var(--primary); */
+    background-color: #ffffff;
+    background: linear-gradient(0deg, var(--bg), #e5e7e9 5%);
   }
 
   .as .asa a {
@@ -434,7 +470,7 @@ body {
 
   .content .info-judul, .content .info-info {
     text-align: center;
-    font-size: 10px;
+    font-size: 9.9px;
   }
 
   .content .info-sinopsis {
@@ -446,8 +482,8 @@ body {
   }
 
   .video-yt {
-    padding-bottom: 56.25%; /* Tetap menggunakan rasio 16:9 */
-    max-width: 100%; /* Pastikan kontainer tidak lebih besar dari layar */
+    padding-bottom: 56.25%;
+    max-width: 100%;
     margin: 0 auto;
   }
 
@@ -483,248 +519,20 @@ body {
     max-width: 30px;
   }
 
+  .comment-isi button, .isi input {
+    width: 100%;
+  }
+
+  .isi, .comment-isi textarea {
+    flex-direction: column;
+    width: 92%;
+    }
+
 }
 
-/*.navbar .navbar__toggle a {*/
-/*  color: var(--bg);*/
-/*  display: inline-block;*/
-/*  font-size: 1.3rem;*/
-/*  margin: 0 1rem;*/
-/*}*/
-/*.navbar .navbar--toggle a:hover {*/
-/*  color: #000000;*/
-/*}*/
-/*.navbar .navbar__toggle a:after {*/
-/*  content: "";*/
-/*  display: block;*/
-/*  padding-bottom: 0.5rem;*/
-/*  border-bottom: 0.1rem solid #17202a ;*/
-/*  transform: scaleX(0);*/
-/*  transition: 0.2s linear;*/
-/*}*/
-
-/*::-moz-selection {*/
-/*  background: #b3d4fc;*/
-/*  text-shadow: none;*/
-/*}*/
-
-/*::selection {*/
-/*  background: #b3d4fc;*/
-/*  text-shadow: none;*/
-/*}*/
-
-/*!**/
-/* * A better looking default horizontal rule*/
-/* *!*/
-
-/*hr {*/
-/*  display: block;*/
-/*  height: 1px;*/
-/*  border: 0;*/
-/*  border-top: 1px solid #ccc;*/
-/*  margin: 1em 0;*/
-/*  padding: 0;*/
-/*}*/
-
-/*!**/
-/* * Remove the gap between audio, canvas, iframes,*/
-/* * images, videos and the bottom of their containers:*/
-/* * https://github.com/h5bp/html5-boilerplate/issues/440*/
-/* *!*/
-
-/*audio,*/
-/*canvas,*/
-/*iframe,*/
-/*img,*/
-/*svg,*/
-/*video {*/
-/*  vertical-align: middle;*/
-/*}*/
-
-/*!**/
-/* * Remove default fieldset styles.*/
-/* *!*/
-
-/*fieldset {*/
-/*  border: 0;*/
-/*  margin: 0;*/
-/*  padding: 0;*/
-/*}*/
-
-/*!**/
-/* * Allow only vertical resizing of textareas.*/
-/* *!*/
-
-/*textarea {*/
-/*  resize: vertical;*/
-/*}*/
-
-/*!* ==========================================================================*/
-/*   Author's custom styles*/
-/*   ========================================================================== *!*/
-
-/*!* ==========================================================================*/
-/*   Helper classes*/
-/*   ========================================================================== *!*/
-
-/*!**/
-/* * Hide visually and from screen readers*/
-/* *!*/
-
-/*.hidden,*/
-/*[hidden] {*/
-/*  display: none !important;*/
-/*}*/
-
-/*!**/
-/* * Hide only visually, but have it available for screen readers:*/
-/* * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility*/
-/* **/
-/* * 1. For long content, line feeds are not interpreted as spaces and small width*/
-/* *    causes content to wrap 1 word per line:*/
-/* *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe*/
-/* *!*/
-
-/*.visually-hidden {*/
-/*  border: 0;*/
-/*  clip: rect(0, 0, 0, 0);*/
-/*  height: 1px;*/
-/*  margin: -1px;*/
-/*  overflow: hidden;*/
-/*  padding: 0;*/
-/*  position: absolute;*/
-/*  white-space: nowrap;*/
-/*  width: 1px;*/
-/*  !* 1 *!*/
-/*}*/
-
-/*!**/
-/* * Extends the .visually-hidden class to allow the element*/
-/* * to be focusable when navigated to via the keyboard:*/
-/* * https://www.drupal.org/node/897638*/
-/* *!*/
-
-/*.visually-hidden.focusable:active,*/
-/*.visually-hidden.focusable:focus {*/
-/*  clip: auto;*/
-/*  height: auto;*/
-/*  margin: 0;*/
-/*  overflow: visible;*/
-/*  position: static;*/
-/*  white-space: inherit;*/
-/*  width: auto;*/
-/*}*/
-
-/*!**/
-/* * Hide visually and from screen readers, but maintain layout*/
-/* *!*/
-
-/*.invisible {*/
-/*  visibility: hidden;*/
-/*}*/
-
-/*!**/
-/* * Clearfix: contain floats*/
-/* **/
-/* * The use of `table` rather than `block` is only necessary if using*/
-/* * `::before` to contain the top-margins of child elements.*/
-/* *!*/
-
-/*.clearfix::before,*/
-/*.clearfix::after {*/
-/*  content: "";*/
-/*  display: table;*/
-/*}*/
-
-/*.clearfix::after {*/
-/*  clear: both;*/
-/*}*/
-
-/*!* ==========================================================================*/
-/*   EXAMPLE Media Queries for Responsive Design.*/
-/*   These examples override the primary ('mobile first') styles.*/
-/*   Modify as content requires.*/
-/*   ========================================================================== *!*/
-
-/*@media only screen and (min-width: 35em) {*/
-/*  !* Style adjustments for viewports that meet the condition *!*/
-/*}*/
-
-/*@media print,*/
-/*  (-webkit-min-device-pixel-ratio: 1.25),*/
-/*  (min-resolution: 1.25dppx),*/
-/*  (min-resolution: 120dpi) {*/
-/*  !* Style adjustments for high resolution devices *!*/
-/*}*/
-
-/*!* ==========================================================================*/
-/*   Print styles.*/
-/*   Inlined to avoid the additional HTTP request:*/
-/*   https://www.phpied.com/delay-loading-your-print-css/*/
-/*   ========================================================================== *!*/
-
-/*@media print {*/
-/*  *,*/
-/*  *::before,*/
-/*  *::after {*/
-/*    background: #fff !important;*/
-/*    color: #000 !important;*/
-/*    !* Black prints faster *!*/
-/*    box-shadow: none !important;*/
-/*    text-shadow: none !important;*/
-/*  }*/
-
-/*  .navbar .nabvar__tonggle {*/
-/*    display: none !important;*/
-/*  }*/
-
-/*  a,*/
-/*  a:visited {*/
-/*    text-decoration: underline;*/
-/*  }*/
-
-/*  a[href]::after {*/
-/*    content: " (" attr(href) ")";*/
-/*  }*/
-
-/*  abbr[title]::after {*/
-/*    content: " (" attr(title) ")";*/
-/*  }*/
-
-/*  !**/
-/*   * Don't show links that are fragment identifiers,*/
-/*   * or use the `javascript:` pseudo protocol*/
-/*   *!*/
-/*  a[href^="#"]::after,*/
-/*  a[href^="javascript:"]::after {*/
-/*    content: "";*/
-/*  }*/
-
-/*  pre {*/
-/*    white-space: pre-wrap !important;*/
-/*  }*/
-
-/*  pre,*/
-/*  blockquote {*/
-/*    border: 1px solid #999;*/
-/*    page-break-inside: avoid;*/
-/*  }*/
-
-/*  tr,*/
-/*  img {*/
-/*    page-break-inside: avoid;*/
-/*  }*/
-
-/*  p,*/
-/*  h2,*/
-/*  h3 {*/
-/*    orphans: 3;*/
-/*    widows: 3;*/
-/*  }*/
-
-/*  h2,*/
-/*  h3 {*/
-/*    page-break-after: avoid;*/
-/*  }*/
-/*}*/
+@media (max-width: 450x) {
+  html {
+    font-size: 55%;
+  }
+}
 
