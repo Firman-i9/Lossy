@@ -162,7 +162,7 @@ body {
 }
 
 .episode-select {
-  display: none;
+  /* display: none; */
   align-items: center;
   margin-bottom: 10px;
 }
