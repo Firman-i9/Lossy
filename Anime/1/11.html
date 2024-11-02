@@ -207,6 +207,18 @@
     const selectedValue = select.value;
     window.location.href = selectedValue;
   }
+
+  // Fungsi untuk menetapkan episode yang dipilih berdasarkan URL saat ini
+  window.onload = function() {
+    const select = document.getElementById('episodeSelect');
+    const currentURL = window.location.pathname;
+    const episode = currentURL.match(/(\d+)\.html/); // Mencari angka di URL
+
+    if (episode) {
+      const episodeNumber = episode[1];
+      select.value = `${episodeNumber}.html`; // Menetapkan pilihan yang sesuai
+    }
+  };
 </script>
 
   <!-- feather -->

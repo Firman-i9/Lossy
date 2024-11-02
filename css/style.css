@@ -162,7 +162,7 @@ body {
 }
 
 .episode-select {
-  /* display: none; */
+  display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
@@ -499,6 +499,7 @@ body {
   .episode-select select {
     font-size: 8.8px;
     padding: 2px;
+    border-radius: 4px;
   }
 
   .button-s {
