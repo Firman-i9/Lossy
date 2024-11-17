@@ -33,7 +33,7 @@
 
 <body>
 <!--navbar-->
-<nav id="navbar">
+<nav id="Navbar">
   <!-- HTML Class -->
   <div class="navbar">
     <div class="navbar__container">
@@ -225,23 +225,24 @@
       select.value = `${episodeNumber}.html`; 
     }
   };
+</script>
 
-// navbar scroll down
-var lastScrollTop = 0;
-navbar = document.getElementById(navbar);
-window.addEventListener(”scroll", function(){
-var scrollTop = window.pageYOffset || document
-documentElement.scrollTop;
-if (scrollTop > lastScrollTop){
-  navbar.style.top="-80px";
-
-} else {
-  navbar.style.top="0";
-}
-lastScrollTop = scrollTop;
-})
+<script type="text/javascript">
+  var lastScrollTop = 0;
+    navbar = document.getElementById("Navbar");
+  window.addEventListener("scroll", function(){
+    var srollTop = window.pageXOffset || document
+      .documentElement.scrollTop;
+    if (screenTop > lastScrollTop){
+      navbar.style.top="-100rem";
+    } else {
+      navbar.style.top="0";
+    }
+    lastScrollTop = srollTop;
+  })
 
 </script>
+
 
   <!-- feather -->
   <script>

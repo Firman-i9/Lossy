@@ -33,23 +33,17 @@
 
 <body>
 <!--navbar-->
-<nav>
-  <div class="navbar">
-    <div class="navbar__container">
-      <a href="../../index.html"><h1 style="background: linear-gradient(to right, #d0d3d4 15%, #d4ac0d 85%); color: transparent; background-clip: text"><em>Lossy</em></h1></a>
-    </div>
-    <div class="navbar__toggle">
-      <a href="../../index.html">Home</a>
-      <a href="#">About Us</a>
-      <a href="#contact">Contact</a>
-    </div>
+<nav class="navbar" id="navbar-pages">
+  <a href="../../index.html" class="navbar-judul"><h1 style="background: linear-gradient(to right, #d0d3d4 15%, #d4ac0d 85%); color: transparent; background-clip: text"><em>Lossy</em></h1></a>
+
+  <div class="navbar-nav">
+    <a href="../../index.html">Home</a>
+    <a href="../index.html">List Anime</a>
+    <a href="#contact">Contact</a>
   </div>
-  <div class="as">
-    <div class="asa">
-      <a href="../../index.html">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
-    </div>
+
+  <div class="navbar-extra" id="book-menu">
+    <a href="#"><i data-feather="menu"></i></a>
   </div>
 </nav>
 
@@ -84,7 +78,7 @@
 
   <div class="button-s">
       <button><a href="12.html">Sebelumnya</a></button>
-      <button><a href="#">Semua Episode</a></button>
+      <button onclick="alertWeb()"><a href="#">Semua Episode</a></button>
       <!-- <button><a href="13.html">Selanjutnya</a></button> -->
       <br>
   </div>
@@ -224,5 +218,7 @@
   <script>
     feather.replace();
   </script>
+
+  <script src="../../js/script.js"></script>
 </body>
 </html>

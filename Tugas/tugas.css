@@ -29,7 +29,7 @@ body {
   padding: 10px 7%;
   background-color: rgb(46, 64, 83);
   border-bottom: 1px solid var(--bg);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

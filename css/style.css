@@ -27,37 +27,51 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 7%;
-  background-color: rgb(46, 64, 83);
+  background-color: rgba(46, 64, 83, 0.808);
   border-bottom: 1px solid var(--bg);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 99;
 }
 
-.as {
-  display: none;
-}
-
-.navbar .navbar__container h1{
+.navbar .navbar-judul h1{
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  /* font-size: 1000rem; */
   color: var(--bg);
+  font-size: 30px;
+  font-weight: 700;
 }
 
-.navbar .navbar__toggle a {
+.navbar .navbar-nav a{
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 1rem;
+  color: var(--bg);
+  font-weight: 600;
+  font-size: 0.8rem;
+  background: 2rem var(--primary);
+  border-radius: 20px;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a {
   color: var(--bg);
   font-size: 1rem;
   margin: 0 1rem;
   display: inline-block;
 }
 
-.navbar .navbar__toggle a:hover {
+.navbar .navbar-nav a:hover {
   color: #d4ac0d;
 }
 
-.navbar .navbar__toggle a::after {
+.navbar .navbar-nav a::after {
   content: "";
   display: block;
   padding-bottom: 4px ;
@@ -66,9 +80,27 @@ body {
   transition: 0.2s linear;
 }
 
-.navbar .navbar__toggle a:hover::after {
+.navbar .navbar-nav a:hover::after {
   transform: scaleX(0.5);
 }
+
+.navbar .navbar-extra a {
+  color: var(--bg);
+}
+
+.navbar .navbar-extra a:hover {
+  color: #d4ac0d;
+}
+
+#book-menu {
+  /* display: none; */
+}
+
+#navbar-pages {
+  background: #2e4053;
+  position: fixed;
+}
+
 
 /*home*/
 .hero {
@@ -376,6 +408,65 @@ body {
   color: var(--primary);
 }
 
+.body.color {
+  background-color: #000000;
+}
+
+
+@media screen and (max-width: 1366px) {
+
+  #book-menu{
+      display: inline-block;
+  }
+
+  .navbar{
+      /* padding: 1.8rem 4%; */
+      /* z-index: 99999; */
+  }
+
+  .navbar .navbar-nav{
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: var(--bg);
+      width: 25rem;
+      height: 100vh;
+      background-image: url(../img/img-anime/1/365613.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .navbar .navbar-nav.active {
+      right: 0;
+      transition: 1s;
+  }
+
+  .navbar .navbar-nav a{
+      font-size: large;
+      color: var(--bg);
+      display: block;
+      margin: 1.2rem;
+  }
+
+  .navbar .navbar-nav a:hover{
+      color: #d4ac0d;
+      /* font-size: 1.6rem; */
+  }
+
+  .navbar .navbar-nav a::after{
+      content: '';
+      display: block;
+      padding-bottom: 0.2rem;
+      border-bottom: 0.1rem solid #d4ac0d;
+      transform: scaleX(0);
+      transition: 0.3s linear;
+  }
+}
+
 @media (max-width: 758px) {
   html {
     font-size: 62.5%;
@@ -395,41 +486,6 @@ body {
     justify-content: center;
   }
 
-  .as {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 7%;
-    position: relative;
-    margin-top: 5rem;
-    /* border-bottom: 1px solid var(--primary); */
-    background-color: #ffffff;
-    background: linear-gradient(0deg, var(--bg), #e5e7e9 5%);
-  }
-
-  .as .asa a {
-    color: var(--primary);
-    margin: 0 1rem;
-    display: inline-block;
-  }
-
-  .as .asa a:hover {
-    content: "";
-  }
-
-  .as .asa a::after {
-    content: "";
-    display: block;
-    padding-bottom: 2px ;
-    border-bottom: 0.1rem solid var(--primary);
-    transform: scaleX(0);
-    transition: 0.2s linear;
-  }
-
-  .as .asa a:hover::after {
-    transform: scaleX(0.5);
-  }
-
   .about {
   padding: 2rem 2.8rem 0 1rem;
   }
@@ -442,20 +498,46 @@ body {
     font-size: 1.4rem;
   }
 
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(46, 64, 83, 0.98);
-    position: fixed;
+  #book-menu {
+    display: inline-block;
   }
 
-  .navbar .navbar__container {
-    font-size: 3rem !important;
+  .navbar-judul {
+    font-size: 1px;
   }
 
-  .navbar .navbar__toggle {
-    display: none;
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+    background-image: url(../img/img-anime/1/365613.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navbar .navbar-nav.active {
+    right: -15%;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
   }
 
   .footer .ftl .ftl-c {
@@ -527,7 +609,7 @@ body {
   .isi, .comment-isi textarea {
     flex-direction: column;
     width: 92%;
-    }
+  }
 
 }
 
@@ -537,3 +619,164 @@ body {
   }
 }
 
+/* ###################### */
+/* ###################### */
+/* ###################### */
+/* ###################### */
+
+/* testing gambar gerak */
+
+/* ###################### */
+/* ###################### */
+/* ###################### */
+/* ###################### */
+/* Slider container */
+.posts-slider {
+    width: 100%; /* 1/3 layar */
+    max-width: 1000px auto; /* Batas maksimal untuk tampilan besar */
+    margin: 67px auto;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    font-family: "Poppins", sans-serif;
+    border-bottom: 10px black;
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 768px) {
+    .posts-slider {
+        /* width: 90%; Lebar penuh untuk tampilan mobile */
+    }
+    .slider__thumb {
+        height: 10rem; /* Sesuaikan tinggi untuk layar kecil */
+        object-fit: cover;
+    }
+    .post-title h4 {
+      font-size: 1em;
+      /* margin: 0; */
+      margin-bottom: -10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .post-title a {
+      /* color: black; */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #ffffff;
+      padding: 240px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.61);
+  }
+}
+
+/* Slide item */
+.slider__item {
+    position: relative;
+    /* padding-top: 100px; */
+    /* padding: 10px; */
+    /* border-radius: 8px; */
+    overflow: hidden;
+    /* background-color: #ff; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* Slide thumbnail */
+.slider__thumb {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Tinggi sesuai tanda biru */
+    overflow: hidden;
+    /* border-radius: 8px; */
+}
+
+.slider__thumb img {
+    width: 100%;
+    /* height: auto; */
+    /* border-radius: 8px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: rgba(0, 0, 0, 0.4); */
+    border-radius: 8px;
+}
+
+/* Content styling */
+.slider__content {
+  padding-top: 10px;
+    /* padding: 5px 0; */
+}
+
+.slider__container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.post-title h4 {
+    font-size: 1em;
+    /* margin: 0; */
+    margin-bottom: -10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-title a {
+    /* color: black; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    padding: 240px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.slider__item:hover .post-title a{
+  opacity: 1;
+}
+
+.post-title a:hover {
+    /* color: #d4ac0d; */
+}
+
+/* Slick slider styling */
+.slick-dots li button:before, .slick-dots li.slick-active button:before {
+    color: #0073e6;
+}
+
+/* ###################### */
+/* ###################### */
+/* ###################### */
+/* ###################### */
+
+/* testing gambar gerak */
+
+/* ###################### */
+/* ###################### */
+/* ###################### */
+/* ###################### */

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-judul">
+            <a href="#"><h1>Judul</h1></a>
+        </div>
+        <div class="navbar-t">
+            <a href="Home">Home</a>
+            <a href="About">About</a>
+            <a href="Contact">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="info-judul" style="margin-top: 7rem;">
+        <h3>Detail Anime Irozuku Sekai no Ashita kara</h3>
+      </div>
+      <br>
+      <!-- HTML list -->
+      <div class="info-anime">
+        <ul>
+          <li><strong>Judul Anime:</strong> Irozuku Sekai no Ashita kara</li>
+          <li><strong>Judul Alternatif:</strong> Iroduku: The World in Colors</li>
+          <li><strong>Jumlah Episode:</strong> 13</li>
+          <li><strong>Status:</strong> Finished Airing</li>
+          <li><strong>Musim Rilis:</strong> Fall 2018</li>
+          <li><strong>Studio:</strong> P.A. Works</li>
+          <li><strong>Genre:</strong> Drama, Fantasy, Romance</li>
+          <li><strong>Durasi Episode:</strong> 24 menit</li>
+          <li><strong>Rating MyAnimeList:</strong> 7.52</li>
+          <li><a href="http://www.iroduku.jp/" target="_blank"><strong style="color: #004997;">Official Site</strong></a></li>
+        </ul>
+      </div>
+      <br>
+      <div class="info-info">
+        <h3>Informasi Anime Irozuku Sekai no Ashita kara</h3>
+      </div>
+      <br>
+      <div class="info-sinopsis">
+        <h2>Sinopsis Anime Irozuku Sekai no Ashita kara</h2>
+        <br id="br-sinop">
+        <p style="padding-bottom: 5px;">
+          Despite the kaleidoscopic magic ingrained in everyday life, Hitomi Tsukishiro's monochrome world is deprived of emotion and feeling. On a night as black and white as any other, amidst the fireworks spreading across the sky, Hitomi's grandmother Kohaku conjures a spell, for which she has been harnessing the moon's light for 60 years, to send Hitomi back in time to the year 2018 when Kohaku was in high school.
+        </p>
+        <p>
+          Hitomi's mission seems unclear, but her grandmother assures her that she will know when she gets there. Following a trip through time aboard a train driven by a strange yellow creature, Hitomi finds herself in stoic artist Yuito Aoi's room, and his drawings flood her world with color. What is Hitomi's purpose there, and why do Yuito's drawings return such breathtaking color to her drab world?
+        </p>
+        <br>
+        <p>[Written by MAL Rewrite]</p>
+      </div>
+      <br>
+    </div>
+    <script type="text/Javascript">
+        var lastScrollTop = 0;
+            navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", function(){
+            var scrollTop = window.pageYOffset || document
+                .documentElement.scrollTop;
+            if (scrollTop > lastScrollTop){
+                navbar.style.top='-80px';
+            } else {
+                navbar.style.top="0";
+            }
+            lastScrollTop = scrollTop;
+        })
+
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "Images/Sun black.png";
+            }else{
+                icon.src = "Images/Moon White.png";
+            }
+        }
+    </script>
+    <!-- <div class="produk" id="produk">
+        <p id="adidas">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, nesciunt?</p>
+        <button type="button" onclick='document.getElementById("adidas").innerHTML= "l"'>klk</button>
+    </div> -->
+
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 7%;
+            border-bottom: 1px solid black;
+            top: 0;
+            left: 0;
+            right: 0;
+            position: fixed;
+            transition: all 300ms ease-in-out;
+            height: 80px;
+            z-index: 999;
+            background: black;
+        }
+
+        .navbar-judul a {
+            color: #ffffff;
+            /* background-clip: text; */
+            font-size: 1rem;
+            text-decoration: none;
+            /* background: linear-gradient(0deg, #d0d3d4 15%, #d4ac0d 85%); */
+
+        }
+
+        .navbar-t a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 1rem;
+            display: inline-block;
+            font-optical-sizing: auto;
+            /* font-weight: 100rem; */
+        }
+
+        .adidas {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blueviolet;
+            color: #ffffff;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: blueviolet;
+        }
+    </style>
+</body>
+</html>
