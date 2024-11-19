@@ -43,9 +43,24 @@
   </div>
 
   <div class="navbar-extra" id="book-menu">
-    <a href="#"><i data-feather="menu"></i></a>
+    <a href="javascript:void(0)"><i data-feather="menu"></i></a>
   </div>
 </nav>
+
+<script type="text/javascript">
+  var lastScrollTop = 0;
+      navbar = document.getElementById("navbar-pages");
+  window.addEventListener("scroll", function(){
+      var scrollTop = window.pageYOffset || document
+          .documentElement.scrollTop;
+      if (scrollTop > lastScrollTop){
+          navbar.style.top='-80px';
+      } else {
+          navbar.style.top="0";
+      }
+      lastScrollTop = scrollTop;
+  })
+</script>
 
 <!-- content -->
  <!-- HTML Block in Line -->
@@ -80,7 +95,7 @@
 
   <div class="button-s">
       <!-- <button><a href="">Sebelumnya</a></button> -->
-      <button onclick="alertWeb()"><a href=".">Semua Episode</a></button>
+      <button onclick="alertWeb()"><a href="javascript:void(0)">Semua Episode</a></button>
       <button><a href="2.html">Selanjutnya</a></button>
       <br>
   </div>
@@ -119,7 +134,7 @@
       Hitomi's mission seems unclear, but her grandmother assures her that she will know when she gets there. Following a trip through time aboard a train driven by a strange yellow creature, Hitomi finds herself in stoic artist Yuito Aoi's room, and his drawings flood her world with color. What is Hitomi's purpose there, and why do Yuito's drawings return such breathtaking color to her drab world?
     </p>
     <br>
-    <p>[Written by MAL Rewrite]</p>
+    <p>[Written by <a href="https://myanimelist.net/anime/37497/Irozuku_Sekai_no_Ashita_kara" target="_blank" style="color: #004997;"><strong>MAL</strong></a> Rewrite]</p>
   </div>
   <br>
   <!-- Html table -->
@@ -178,10 +193,19 @@
     </div>
     <div class="ftl">
       <div class="ftl-c">
+        <h3>About</h3>
+        <p>
+          <a href="https://www.instagram.com/firmanadit4249/profilecard/?igsh=bjZoODZpYXZqeDdh" target="_blank">Term</a>
+          <a href="mailto:firmanadityawan@gmail.com" target="_blank">History</a>
+          <a href="https://www.facebook.com/firman.adit.589/" target="_blank">Careers</a>
+        </p>
+      </div>
+      <div class="ftl-c">
         <h3>Contact Us</h3>
         <p>
           <a href="https://www.instagram.com/firmanadit4249/profilecard/?igsh=bjZoODZpYXZqeDdh" target="_blank">Instagram</a>
           <a href="mailto:firmanadityawan@gmail.com" target="_blank">Email</a>
+          <a href="https://www.facebook.com/firman.adit.589/" target="_blank">Facebook</a>
         </p>
       </div>
     </div>

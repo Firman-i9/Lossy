@@ -46,7 +46,6 @@ jQuery(document).ready(function($) {
   });
 });
 
-
 // Toggle class active
 // const navbarNav = document.querySelector(".navbar-nav");
 
