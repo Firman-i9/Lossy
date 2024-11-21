@@ -16,6 +16,7 @@
   <link rel="icon" href="../../img/favicon_io/favicon.ico" sizes="any">
   <link rel="icon" href="../../img/favicon_io/favicon-32x32.png" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../img/favicon_io/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--  <link rel="manifest" href="site.webmanifest">-->
   <meta name="theme-color" content="#fafafa">
@@ -29,7 +30,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet"/>
 
 <!--  Icon-->
-  <script src="https://unpkg.com/feather-icons"></script></head>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+</head>
 
 <body>
 <!--navbar-->
@@ -38,14 +41,52 @@
 
   <div class="navbar-nav">
     <a href="../../index.html">Home</a>
-    <a href="../index.html">List Anime</a>
+    <a href="javascript:void(0)" class="dropdown">Anime List
+      <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-list">
+      <a href="1.html">Irozuku Sekai no Ashita kara</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
     <a href="#contact">Contact</a>
   </div>
 
   <div class="navbar-extra" id="book-menu">
-    <a href="#"><i data-feather="menu"></i></a>
+    <a href="javascript:void(0)"><i data-feather="menu"></i></a>
   </div>
 </nav>
+
+<script type="text/javascript">
+  var lastScrollTop = 0;
+      navbar = document.getElementById("navbar-pages");
+  window.addEventListener("scroll", function(){
+      var scrollTop = window.pageYOffset || document
+          .documentElement.scrollTop;
+      if (scrollTop > lastScrollTop){
+          navbar.style.top='-80px';
+      } else {
+          navbar.style.top="0";
+      }
+      lastScrollTop = scrollTop;
+  })
+</script>
+<!-- dropdown -->
+<script>
+  var dropdown = document.getElementsByClassName("dropdown");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+</script>
 
 <!-- content -->
 <div class="content">
@@ -76,9 +117,28 @@
       </div>
   </div>
 
+  <script>
+    function changeEpisode() {
+      const select = document.getElementById('episodeSelect');
+      const selectedValue = select.value;
+      window.location.href = selectedValue;
+    }
+  
+    window.onload = function() {
+      const select = document.getElementById('episodeSelect');
+      const currentURL = window.location.pathname;
+      const episode = currentURL.match(/(\d+)\.html/); 
+  
+      if (episode) {
+        const episodeNumber = episode[1];
+        select.value = `${episodeNumber}.html`; 
+      }
+    };
+  </script>  
+
   <div class="button-s">
       <button><a href="11.html">Sebelumnya</a></button>
-      <button onclick="alertWeb()"><a href="#">Semua Episode</a></button>
+      <button onclick="alertWeb()"><a href="javascript:void(0)">Semua Episode</a></button>
       <button><a href="13.html">Selanjutnya</a></button>
       <br>
   </div>
@@ -116,7 +176,7 @@
       Hitomi's mission seems unclear, but her grandmother assures her that she will know when she gets there. Following a trip through time aboard a train driven by a strange yellow creature, Hitomi finds herself in stoic artist Yuito Aoi's room, and his drawings flood her world with color. What is Hitomi's purpose there, and why do Yuito's drawings return such breathtaking color to her drab world?
     </p>
     <br>
-    <p>[Written by MAL Rewrite]</p>
+    <p>[Written by <a href="https://myanimelist.net/anime/37497/Irozuku_Sekai_no_Ashita_kara" target="_blank" style="color: #004997;"><strong>MAL</strong></a> Rewrite]</p>
   </div>
   <br>
   <div class="info-off">
@@ -173,10 +233,19 @@
     </div>
     <div class="ftl">
       <div class="ftl-c">
+        <h3>About</h3>
+        <p>
+          <a href="#about">About</a>
+          <a href="#galeri">Gallery</a>
+          <a href="#rekomen">Recommendation</a>
+        </p>
+      </div>
+      <div class="ftl-c">
         <h3>Contact Us</h3>
         <p>
           <a href="https://www.instagram.com/firmanadit4249/profilecard/?igsh=bjZoODZpYXZqeDdh" target="_blank">Instagram</a>
           <a href="mailto:firmanadityawan@gmail.com" target="_blank">Email</a>
+          <a href="https://www.facebook.com/firman.adit.589/" target="_blank">Facebook</a>
         </p>
       </div>
     </div>
@@ -194,25 +263,6 @@
 <div class="scroll">
   <a href="#"><i data-feather="arrow-up-circle"></i></a>
 </div>
-
-<script>
-  function changeEpisode() {
-    const select = document.getElementById('episodeSelect');
-    const selectedValue = select.value;
-    window.location.href = selectedValue;
-  }
-
-  window.onload = function() {
-    const select = document.getElementById('episodeSelect');
-    const currentURL = window.location.pathname;
-    const episode = currentURL.match(/(\d+)\.html/); 
-
-    if (episode) {
-      const episodeNumber = episode[1];
-      select.value = `${episodeNumber}.html`; 
-    }
-  };
-</script>
 
   <!-- feather -->
   <script>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Irozuku Sekai no Ashita kara</title>
+  <title>Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</title>
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -16,6 +16,7 @@
   <link rel="icon" href="../../img/favicon_io/favicon.ico" sizes="any">
   <link rel="icon" href="../../img/favicon_io/favicon-32x32.png" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../img/favicon_io/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!--  <link rel="manifest" href="site.webmanifest">-->
   <meta name="theme-color" content="#fafafa">
@@ -29,8 +30,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet"/>
 
 <!--  Icon-->
-  <script src="https://unpkg.com/feather-icons"></script></head>
+  <script src="https://unpkg.com/feather-icons"></script>
 
+</head>
 <body>
 <!--navbar-->
 <nav class="navbar" id="navbar-pages">
@@ -38,20 +40,60 @@
 
   <div class="navbar-nav">
     <a href="../../index.html">Home</a>
-    <a href="../index.html">List Anime</a>
+    <a href="javascript:void(0)" class="dropdown">Anime List
+      <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-list">
+      <a href="../1/1.html">Irozuku Sekai no Ashita kara</a>
+      <a href="javascript:void(0)">Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</a>
+      <a href="../3/1.html">Yuusha Party wo Tsuihou sareta Beast Tamer, Saikyoushu no Nekomimi Shoujo to Deau</a>
+      <a href="../4/1.html">Link 4</a>
+      <a href="../5/1.html">Link 5</a>
+    </div>
     <a href="#contact">Contact</a>
   </div>
 
   <div class="navbar-extra" id="book-menu">
-    <a href="#"><i data-feather="menu"></i></a>
+    <a href="javascript:void(0)"><i data-feather="menu"></i></a>
   </div>
 </nav>
+
+<script type="text/javascript">
+  var lastScrollTop = 0;
+      navbar = document.getElementById("navbar-pages");
+  window.addEventListener("scroll", function(){
+      var scrollTop = window.pageYOffset || document
+          .documentElement.scrollTop;
+      if (scrollTop > lastScrollTop){
+          navbar.style.top='-80px';
+      } else {
+          navbar.style.top="0";
+      }
+      lastScrollTop = scrollTop;
+  })
+</script>
+<!-- dropdown -->
+<script>
+  var dropdown = document.getElementsByClassName("dropdown");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+  </script>
 
 <!-- content -->
  <!-- HTML Block in Line -->
 <div class="content">
   <div class="content-judul">
-      <h1>Irozuku Sekai no Ashita kara Episode 1 Subtitle Indonesia</h1>
+      <h1>Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e Episode 1 Subtitle Indonesia</h1>
       <p>Posted by Anonymous</p>
   </div>
   <div class="player">
@@ -74,57 +116,79 @@
       </div>
       <!-- HTML Media -->
       <div class="video-yt" id="yt"> <!-- HTML ID -->
-        <iframe src="https://www.youtube.com/embed/rlcUqeGUFN8?si=ew5f-M4pMKzoHyKF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/iwBYYLAahB8?si=E9uufzYXUBXhTLFu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
   </div>
+  <script>
+    // episode select
+    function changeEpisode() {
+      const select = document.getElementById('episodeSelect');
+      const selectedValue = select.value;
+      window.location.href = selectedValue;
+    }
+  
+    window.onload = function() {
+      const select = document.getElementById('episodeSelect');
+      const currentURL = window.location.pathname;
+      const episode = currentURL.match(/(\d+)\.html/);
+  
+      if (episode) {
+        const episodeNumber = episode[1];
+        select.value = `${episodeNumber}.html`; 
+      }
+    };
+  </script>
 
   <div class="button-s">
       <!-- <button><a href="">Sebelumnya</a></button> -->
-      <button onclick="alertWeb()"><a href="#">Semua Episode</a></button>
+      <button onclick="alertWeb()"><a href="javascript:void(0)">Semua Episode</a></button>
       <button><a href="2.html">Selanjutnya</a></button>
       <br>
   </div>
   <br><br>
   <div class="info-judul">
-    <h3>Detail Anime Irozuku Sekai no Ashita kara</h3>
+    <h3>Detail Anime Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</h3>
   </div>
   <br>
   <!-- HTML list -->
   <div class="info-anime">
     <ul>
-      <li><strong>Judul Anime:</strong> Irozuku Sekai no Ashita kara</li>
-      <li><strong>Judul Alternatif:</strong> Iroduku: The World in Colors</li>
-      <li><strong>Jumlah Episode:</strong> 13</li>
+      <li><strong>Judul Anime:</strong> Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</li>
+      <li><strong>Judul Alternatif:</strong> Welcome to the Classroom of the Elite, You-jitsu</li>
+      <li><strong>Jumlah Episode:</strong> 12</li>
       <li><strong>Status:</strong> Finished Airing</li>
-      <li><strong>Musim Rilis:</strong> Fall 2018</li>
-      <li><strong>Studio:</strong> P.A. Works</li>
-      <li><strong>Genre:</strong> Drama, Fantasy, Romance</li>
+      <li><strong>Musim Rilis:</strong> Summer 2017</li>
+      <li><strong>Studio:</strong> Lerche</li>
+      <li><strong>Genre:</strong> Drama, Suspense</li>
       <li><strong>Durasi Episode:</strong> 24 menit</li>
-      <li><strong>Rating MyAnimeList:</strong> 7.52</li>
-      <li><a href="http://www.iroduku.jp/" target="_blank"><strong style="color: #004997;">Official Site</strong></a></li>
+      <li><strong>Rating MyAnimeList:</strong> 7.85</li>
+      <li><a href="http://you-zitsu.com/1st/" target="_blank"><strong style="color: #004997;">Official Site</strong></a></li>
     </ul>
   </div>
   <br>
   <div class="info-info">
-    <h3>Informasi Anime Irozuku Sekai no Ashita kara</h3>
+    <h3>Informasi Anime Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</h3>
   </div>
   <br>
   <div class="info-sinopsis">
-    <h2>Sinopsis Anime Irozuku Sekai no Ashita kara</h2>
+    <h2>Sinopsis Anime Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</h2>
     <br id="br-sinop">
     <p style="padding-bottom: 5px;">
-      Despite the kaleidoscopic magic ingrained in everyday life, Hitomi Tsukishiro's monochrome world is deprived of emotion and feeling. On a night as black and white as any other, amidst the fireworks spreading across the sky, Hitomi's grandmother Kohaku conjures a spell, for which she has been harnessing the moon's light for 60 years, to send Hitomi back in time to the year 2018 when Kohaku was in high school.
+      On the surface, Koudo Ikusei Senior High School is a utopia. The students enjoy an unparalleled amount of freedom, and it is ranked highly in Japan. However, the reality is less than ideal. Four classes, A through D, are ranked in order of merit, and only the top classes receive favorable treatment.
+    </p>
+    <p style="padding-bottom: 5px;">
+      Kiyotaka Ayanokouji is a student of Class D, where the school dumps its worst. There he meets the unsociable Suzune Horikita, who believes she was placed in Class D by mistake and desires to climb all the way to Class A, and the seemingly amicable class idol Kikyou Kushida, whose aim is to make as many friends as possible.
     </p>
     <p>
-      Hitomi's mission seems unclear, but her grandmother assures her that she will know when she gets there. Following a trip through time aboard a train driven by a strange yellow creature, Hitomi finds herself in stoic artist Yuito Aoi's room, and his drawings flood her world with color. What is Hitomi's purpose there, and why do Yuito's drawings return such breathtaking color to her drab world?
+      While class membership is permanent, class rankings are not; students in lower ranked classes can rise in rankings if they score better than those in the top ones. Additionally, in Class D, there are no bars on what methods can be used to get ahead. In this cutthroat school, can they prevail against the odds and reach the top?
     </p>
     <br>
-    <p>[Written by MAL Rewrite]</p>
+    <p>[Written by <a href="https://myanimelist.net/anime/35507/Youkoso_Jitsuryoku_Shijou_Shugi_no_Kyoushitsu_e" target="_blank" style="color: #004997;"><strong>MAL</strong></a> Rewrite]</p>
   </div>
   <br>
   <!-- Html table -->
   <div class="info-off">
-    <h2>Karakter Anime Irozuku Sekai no Ashita kara</h2>
+    <h2>Karakter Anime Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</h2>
     <div class="info-table">
       <table>
         <thead>
@@ -136,19 +200,19 @@
         </thead>
         <tbody>
           <tr>
-            <td><img src="../../img/img-anime/1/365613.jpg" alt="Foto Karakter Tsukishiro, Hitomi" id="img-anime"></td>
-            <td>Tsukishiro, Hitomi</td>
-            <td>Ishihara, Kaori</td>
-          </tr>
-          <tr>
-            <td><img src="../../img/img-anime/1/381553.jpg" alt="Foto Karakter Aoi, Yuito" id="img-anime"></td>
-            <td>Aoi, Yuito</td>
+            <td><img src="../../img/img-anime/2/333108.jpg" alt="Foto Karakter Ayanokouji, Kiyotaka" id="img-anime"></td>
+            <td>Ayanokouji, Kiyotaka</td>
             <td>Chiba, Shouya</td>
           </tr>
           <tr>
-            <td><img src="../../img/img-anime/1/381554.jpg" alt="Foto Karakter Tsukishiro, Kohaku" id="img-anime"></td>
-            <td>Tsukishiro, Kohaku</td>
-            <td>Hondo, Kaede</td>
+            <td><img src="../../img/img-anime/2/333109.jpg" alt="Foto Karakter Horikita, Suzune" id="img-anime"></td>
+            <td>Horikita, Suzune</td>
+            <td>Kitou, Akari</td>
+          </tr>
+          <tr>
+            <td><img src="../../img/img-anime/2/333116.jpg" alt="Foto Karakter Karuizawa, Keiu" id="img-anime"></td>
+            <td>Karuizawa, Kei</td>
+            <td>Taketatsu, Ayana</td>
           </tr>
         </tbody>
       </table>
@@ -178,10 +242,19 @@
     </div>
     <div class="ftl">
       <div class="ftl-c">
+        <h3>About</h3>
+        <p>
+          <a href="#about">About</a>
+          <a href="#galeri">Gallery</a>
+          <a href="#rekomen">Recommendation</a>
+        </p>
+      </div>
+      <div class="ftl-c">
         <h3>Contact Us</h3>
         <p>
           <a href="https://www.instagram.com/firmanadit4249/profilecard/?igsh=bjZoODZpYXZqeDdh" target="_blank">Instagram</a>
           <a href="mailto:firmanadityawan@gmail.com" target="_blank">Email</a>
+          <a href="https://www.facebook.com/firman.adit.589/" target="_blank">Facebook</a>
         </p>
       </div>
     </div>
@@ -199,26 +272,6 @@
 <div class="scroll">
   <a href="#"><i data-feather="arrow-up-circle"></i></a>
 </div>
-
-<script>
-  // episode select
-  function changeEpisode() {
-    const select = document.getElementById('episodeSelect');
-    const selectedValue = select.value;
-    window.location.href = selectedValue;
-  }
-
-  window.onload = function() {
-    const select = document.getElementById('episodeSelect');
-    const currentURL = window.location.pathname;
-    const episode = currentURL.match(/(\d+)\.html/);
-
-    if (episode) {
-      const episodeNumber = episode[1];
-      select.value = `${episodeNumber}.html`; 
-    }
-  };
-</script>
 
   <!-- feather -->
   <script>

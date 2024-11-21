@@ -59,19 +59,17 @@ body {
 
 .navbar .navbar-nav.active {
   left: 0;
-  transition: 1s;
+  transition: 0.8s;
 }
 
 .navbar .navbar-nav a, .navbar .navbar-nav .dropdown {
   font-size: large;
   color: #000000;
   display: block;
-  /* margin: 1rem 0 0 1rem; */
   font-family: "Poppins", sans-serif;
   margin: 7px;
   padding: 0.5rem;
   font-size: 1.2rem;
-  /* border-bottom: 1px solid #0000008c; */
 }
 
 .navbar .navbar-nav .dropdown-list {
@@ -148,6 +146,10 @@ body {
   background-color: green;
 }
 
+#book-menu {
+  display: "";
+}
+
 /*home*/
 .hero {
   min-height: 100vh;
@@ -219,10 +221,83 @@ body {
 
 /* about */
 .about {
-  padding: 2rem 30rem 0 6rem;
-  font-size: 1.3rem;
+  padding: 4rem 7% 2.5rem;
+  font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(180deg, var(--bg), #e5e7e9 5%);
+}
+
+.about-content {
+  display: block;
+  width: 55rem;
+}
+
+/* Gallery */
+.galeri {
+  padding: 1rem 7% 1.4rem;
+  text-align: center;
+}
+
+.galeri h2 {
+  color: var(--bg);
+  margin-bottom: 3.5rem;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.galeri .galeri-content {
+  display: flex;
+  align-items: center; 
+  gap: 2rem; 
+  margin-bottom: 2rem;
+}
+/* 
+.galeri-content-r.reverse {
+  flex-direction: row-reverse; 
+} */
+
+.galeri .galeri-content .galeri-img {
+  flex: 1 1 40%;
+}
+
+.galeri .galeri-content .galeri-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.galeri .galeri-content .galeri-p {
+  flex: 1 1 60%;
+  text-align: left;
+  /* padding: 0 1rem; */
+}
+
+.galeri .galeri-content .galeri-p h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.galeri .galeri-content .galeri-p p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* recomen */
+#rekomen {
+  color: var(--bg);
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background: var(--primary);
+  border-radius: 10px;
+  text-align: center;
+  margin: 1rem 7% 1.4rem;
+  /* margin-bottom: 3.5rem; */
 }
 
 /*content*/
@@ -308,6 +383,7 @@ body {
   color: #ffffff;
   padding: 5px 0;
   font-size: 14px;
+  text-align: center;
 }
 
 .content .info-anime {
@@ -430,7 +506,7 @@ body {
 
 .footer .ftl {
   display: flex;
-  margin-left: 57%;
+  margin-left: 50.7%;
 }
 
 .footer .ftl .ftl-c {
@@ -564,6 +640,20 @@ body {
     margin-left: 17rem;
   }
 
+  .galeri .galeri-content,
+  .galeri .galeri-content.reverse {
+    flex-direction: column; /* Semua elemen akan ditampilkan secara vertikal */
+    text-align: center; /* Pusatkan teks */
+  }
+
+  .galeri .galeri-content .galeri-img {
+    flex: unset;
+  }
+
+  .galeri .galeri-content .galeri-p {
+    flex: unset;
+  }
+
   .content {
     margin-top: 10px;
     width: 28rem;
@@ -650,23 +740,11 @@ body {
 /* ###################### */
 /* ###################### */
 /* Slider container */
-.posts-slider {
-    width: 100%; /* 1/3 layar */
-    max-width: 1000px auto; /* Batas maksimal untuk tampilan besar */
-    margin: 67px auto;
-    /* background-color: black; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; */
-    font-family: "Poppins", sans-serif;
-    border-bottom: 10px black;
-}
 
 /* Responsif untuk tampilan mobile */
 @media (max-width: 768px) {
-    .posts-slider {
-        /* width: 90%; Lebar penuh untuk tampilan mobile */
+  .posts-slider {
+    /* width: 90%; Lebar penuh untuk tampilan mobile */
     }
     .slider__thumb {
         height: 10rem; /* Sesuaikan tinggi untuk layar kecil */
@@ -680,9 +758,9 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-  }
-  
-  .post-title a {
+    }
+    
+    .post-title a {
       /* color: black; */
       position: absolute;
       bottom: 0;
@@ -694,10 +772,22 @@ body {
       transition: opacity 0.3s ease-in-out;
       font-size: 2rem;
       background-color: rgba(0, 0, 0, 0.61);
+    }
   }
-}
-
-/* Slide item */
+  
+  .posts-slider {
+      width: 86%; /* 1/3 layar */
+      max-width: 1000px auto; /* Batas maksimal untuk tampilan besar */
+      margin: 67px auto;
+      /* background-color: black; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* height: 100vh; */
+      font-family: "Poppins", sans-serif;
+      border-bottom: 10px black;
+  }
+  /* Slide item */
 .slider__item {
     position: relative;
     /* padding-top: 100px; */
