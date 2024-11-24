@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    /* Reset dan pengaturan dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .logo h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .logo span {
+      color: #d4af37; /* Warna emas untuk huruf Y */
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .menu-section {
+      flex: 1;
+      text-align: center;
+    }
+
+    .menu-section h2 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .menu-section ul {
+      list-style-type: none;
+    }
+
+    .menu-section ul li {
+      margin: 5px 0;
+    }
+
+    .menu-section ul li a {
+      text-decoration: none;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .menu-section ul li a:hover {
+      color: #d4af37; /* Warna hover emas */
+    }
+
+    /* Responsif untuk perangkat mobile */
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column; /* Atur menu jadi kolom */
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Bagian Logo -->
+    <div class="logo">
+      <h1>Loss<span>y</span></h1>
+    </div>
+
+    <!-- Bagian Menu -->
+    <div class="menu">
+      <!-- Section About -->
+      <div class="menu-section">
+        <h2>About</h2>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Recommendation</a></li>
+        </ul>
+      </div>
+
+      <!-- Section Contact Us -->
+      <div class="menu-section">
+        <h2>Contact Us</h2>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Email</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
