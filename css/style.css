@@ -184,13 +184,13 @@ body {
 
 .hero .hero-content h1 {
   font-size: 2.2em;
-  color: #000000;
+  color: #d4ac0d;
   text-shadow: 1px 1px 3px black;
   /* line-height: 1; */
 }
 
 .hero .hero-content p {
-  color: #000000;
+  color: #d4ac0d;
   text-shadow: 1px 1px 3px black;
   mix-blend-mode: 2px color black;
 }
@@ -585,14 +585,6 @@ body {
   .about .about-content {
     width: 30rem;
   }
-
-  /* .about .about-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .about .about-content p {
-    font-size: 1.4rem;
-  } */
 
   /* navbar */
   #book-menu {
