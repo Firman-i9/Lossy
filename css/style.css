@@ -195,30 +195,6 @@ body {
   mix-blend-mode: 2px color black;
 }
 
-/* .hero .hero-content .start {
-  margin-top: 10px;
-  display: inline-block;
-  padding: 10px 30px;
-  font-size: 1.2rem;
-  color: #ffffff;
-  background-color: rgba(34, 40, 49, 0.8);
-  border-radius: 0.5rem;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
-}
-
-.hero .hero-content a:hover {
-  background-color: black;
-  background: linear-gradient(270deg, #d0d3d4 15%, #d4ac0d 85%, #d0d3d4, #d4ac0d);
-  color: transparent;
-  animation: slide 10s linear infinite;
-  background-clip: text;
-  transform: scale(1.11);
-}
-
-@keyframes slide {
-  to {background-position: 100rem}
-} */
-
 /* about */
 .about {
   padding: 4rem 7% 2.5rem;
@@ -283,15 +259,15 @@ body {
 }
 
 #read-more {
-  background: #2e4053da;
-  color: #ffffff;
+  /* background: #2e4053da; */
+  color: #004997;
   border-radius: 5px;
-  padding: 6px;
-  font-size: 90%;
+  /* padding: 2px; */
+  font-size: 1.35;
 }
 
 #read-more:hover {
-  background-color: #2e4053;
+  /* background-color: #2e4053; */
 }
 
 /* recomen */
