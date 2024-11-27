@@ -1,0 +1,267 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+.body {
+    background-color: #fff4f7;
+    
+}
+
+.html {
+    font-size: 60px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6b705c;
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: #fff4f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    background-color: #fff4f7;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 35px 20px;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+.navbar .logo {
+    font-size: 3rem; 
+    color: #6b705c;
+    font-weight: bold;
+  }
+  
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0; 
+    padding: 0;
+  }
+  
+.navbar ul li {
+    margin: 0 15px;
+  }
+  
+.navbar ul li a {
+    text-decoration: none;
+    color: #666;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  
+.navbar ul li a:hover {
+    color: #cb997e;
+    border-radius: 5px;
+  }
+
+  /* Header Styling */
+  .header {
+    min-height: 100vh;
+    display: flex;
+    background-image: url(image/cacapunyafoto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.contentsidebar {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 50%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #333;
+}
+
+.sidebar h2:hover {
+    color: #007BFF;
+}
+
+/* Daftar Testimoni */
+.testimoni-list {
+    display: none;
+}
+
+.testimoni-list.hidden {
+    display: none;
+}
+
+.testimoni-list:not(.hidden) {
+    display: block;
+}
+
+.testimonial-box {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-box p {
+    font-style: italic;
+    color: #555;
+    margin: 0;
+}
+
+.testimonial-box span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+    text-align: right;
+}
+
+/* Tombol Toggle */
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+.toggle-btn:hover i {
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+/* Home Styling */
+.Home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    margin-top: -5rem;
+  }
+  
+.Home .content2 {
+    max-width: 700px;
+  }
+  
+.Home h3 {
+    font-size: 2.5em;
+    color: #666;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 3.3rem;
+  }
+  
+.Home p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-left: 3.3rem;
+    margin-right: -7rem;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.Home img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+    gap:10px;
+    float: right;
+  }
+
+ /* Footer us Styling */
+ footer {
+    background-color: #fff4f7; 
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footercontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    margin-bottom: 15px;
+  }
+  
+  .footer-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #6b705c;
+    font-size: 1rem;
+  }
+  
+  .footer-links a:hover {
+    color: #cb997e; 
+  }
+  
+  .footer-social a {
+    margin: 0 10px;
+  }
+  
+  .footer-social img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    color: #cb997e;
+  }
+  
+  .footer-info p {
+    margin: 5px 0;
+    color: #6b705c;
+    font-size: 1rem;
+  }
+  
+  .footer-info a {
+    color: #6b705c;
+    text-decoration: none;
+  }
+  
+  .footer-info a:hover {
+    color: #cb997e;
+  }

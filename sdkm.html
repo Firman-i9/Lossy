@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni dengan Sidebar Interaktif</title>
+    <link rel="stylesheet" href="a.css">
+    <!-- Menyertakan Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar Section -->
+<nav class="navbar">
+    <div class="logo">GirlsDaily</div>
+    <ul>
+      <li><a href="utsygbener.html">Home</a></li>
+      <li><a href="utsygbener.html">About</a></li>
+      <li><a href="Tips&Trick.html">Tips&Trick</a></li>
+      <li><a href="Products.html">Gallery</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+<!-- Header Section -->
+  <header class="header"></header>
+ 
+    <div class="contentsidebar">
+        <!-- Tombol Toggle Sidebar -->
+        <button class="toggle-btn" id="toggleSidebar">
+            <i class="fa-solid fa-bars" style="color: #000000;"></i>
+        </button>
+
+        <!-- Sidebar -->
+        <div class="sidebar hidden" id="sidebar">
+            <h2 id="toggleTestimoni">Testimoni</h2>
+            <div class="testimoni-list hidden" id="testimoniList">
+                <div class="testimonial-box">
+                    <p>"Pelayanan yang sangat baik, saya sangat puas!"</p>
+                    <span>- John Doe</span>
+                </div>
+                <div class="testimonial-box">
+                    <p>"Produk yang berkualitas dan harga terjangkau."</p>
+                    <span>- Jane Smith</span>
+                </div>
+                <div class="testimonial-box">
+                    <p>"Pengiriman cepat dan respon yang ramah."</p>
+                    <span>- Alex Brown</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Section -->
+  <section class="Home" id="Home">
+    <div class="content2">
+      <h3 style="margin-top: 6rem;">GilrsDaily</h3>
+      <p>Welcome to GirlsDaily, your trusted companion on your beauty journey! Here, we provide the best skincare product recommendations, easy-to-follow skincare tips, and beauty inspiration tailored to your needs. Whether you're caring for your skin, discovering a new routine, or simply looking for the right products, GirlsDaily offers trustworthy and enjoyable information. Start your beauty journey with us and discover the healthy skin you've always dreamed of!</p>
+    </div>
+    <div class="img-side">
+        <img src="img/latar.png" alt="Girls Daily">
+    </div>
+    </div>
+  </section>
+
+<!-- about Section -->
+  <section class="about" id="About">
+    <h1 class="heading"> About Us</h1>
+       <video class="content3" src="img/firerem.png" loop autoplay muted></video>
+      <div class="content3-text">
+        <br><br><br>
+        <h3>Why choose us?</h3>
+        <p>GirlsDaily is a beauty platform that helps you find the best skincare products tailored to your skin's needs. Our vision is to provide accurate information and easily accessible solutions, so you can care for your skin with confidence. Our mission is to make your skincare journey smarter, more effective, and enjoyable, with personalized recommendations and helpful care tips.</p>
+      </div>
+</section>
+
+<br><br><br><br><br><br>
+  
+<!-- Footer -->
+<footer>
+  <div class="footercontainer">
+    <div class="footer-social">
+      <a href="https://www.instagram.com/withlovec___/profilecard/?igsh=MXRqbGR1Mnl5dndqOQ=="><i class="fa-brands fa-instagram fa-lg" style="color: #000000;"></i></i></a>
+      <a href="https://youtu.be/O_qgaOUR3Fo?si=aeZxSr6K4kJJTcYx"><i class="fa-brands fa-youtube fa-lg" style="color: #000000;"></i></a>
+      <a href="mailto:farisaszatya@gmail.com"><i class="fa-solid fa-envelope fa-lg" style="color: #000000;"></i></i></a>
+      <a href="https://vt.tiktok.com/ZSjXEwbSV/"><i class="fa-brands fa-tiktok fa-lg" style="color: #000000;"></i></i></a>
+  </div>
+      <br>
+
+      <div class="footer-links">
+        <a href="utsygbener.html">Home</a>
+        <a href="utsygbener.html">About</a>
+        <a href="Tips&Trick.html">Tips&Trik</a>
+        <a href="Products.html">Products</a>
+        <a href="Contact.html">Contact</a>
+      </div>
+      
+
+      <div class="footer-info">
+        <p>Copyright 2024 | Designed By Farisa Shifa Alia <span class="designer"></span></p>
+        Visit The <a href="https://www.larocheposay.co.id/" target="_blank">LaRocheCare</a>
+      </div>
+  </div>
+</footer>
+
+    <script>
+        // Ambil elemen tombol, sidebar, dan daftar testimoni
+        const toggleButton = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+        const toggleTestimoni = document.getElementById('toggleTestimoni');
+        const testimoniList = document.getElementById('testimoniList');
+
+        // Event listener untuk membuka/menutup sidebar
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+        });
+
+        // Event listener untuk menampilkan/menyembunyikan daftar testimoni
+        toggleTestimoni.addEventListener('click', () => {
+            testimoniList.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

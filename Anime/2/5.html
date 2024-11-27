@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lossy | Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</title>
+  <!-- fav icon -->
+  <link rel="icon" href="../../img/favicon_io/favicon.ico" sizes="any">
+  <link rel="icon" href="../../img/favicon_io/favicon-32x32.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../img/favicon_io/apple-touch-icon.png">
+  <!--  style-->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+<!--  fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Icon -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+<!--navbar-->
+<nav class="navbar" id="navbar-pages">
+  <a href="../../index.html" class="navbar-judul"><h1 style="background: linear-gradient(to right, #d0d3d4 15%, #d4ac0d 85%); color: transparent; background-clip: text"><em>Lossy</em></h1></a>
+
+  <div class="navbar-nav">
+    <a href="../../index.html">Home</a>
+    <a href="javascript:void(0)" class="dropdown">Anime List
+      <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-list">
+      <a href="../1/1.html">Irozuku Sekai no Ashita kara</a>
+      <a href="javascript:void(0)">Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</a>
+      <a href="../3/1.html">Yuusha Party wo Tsuihou sareta Beast Tamer</a>
+      <a href="../4/1.html">Sasaki to Pii-chan</a>
+      <a href="../5/1.html">Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</a>
+    </div>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="navbar-extra" id="book-menu">
+    <a href="javascript:void(0)"><i data-feather="menu"></i></a>
+  </div>
+</nav>
+
+<script type="text/javascript">
+  var lastScrollTop = 0;
+      navbar = document.getElementById("navbar-pages");
+  window.addEventListener("scroll", function(){
+      var scrollTop = window.pageYOffset || document
+          .documentElement.scrollTop;
+      if (scrollTop > lastScrollTop){
+          navbar.style.top='-80px';
+      } else {
+          navbar.style.top="0";
+      }
+      lastScrollTop = scrollTop;
+  })
+</script>
+<!-- dropdown -->
+<script>
+  var dropdown = document.getElementsByClassName("dropdown");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+  </script>
+
+<!-- content -->
+ <!-- HTML Block in Line -->
+<div class="content">
+  <div class="content-judul">
+      <h1>Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e S1 Episode 5 Subtitle Indonesia</h1>
+      <p>Posted by Anonymous</p>
+  </div>
+  <div class="player">
+      <div class="episode-select">
+          <select id="episodeSelect" onchange="changeEpisode()">
+            <option value="1.html">Episode 1</option>
+            <option value="2.html">Episode 2</option>
+            <option value="3.html">Episode 3</option>
+            <option value="4.html">Episode 4</option>
+            <option value="5.html">Episode 5</option>
+            <option value="6.html">Episode 6</option>
+            <option value="7.html">Episode 7</option>
+            <option value="8.html">Episode 8</option>
+            <option value="9.html">Episode 9</option>
+            <option value="10.html">Episode 10</option>
+            <option value="11.html">Episode 11</option>
+            <option value="12.html">Episode 12</option>
+          </select>
+      </div>
+      <!-- HTML Media -->
+      <div class="video-yt" id="yt"> <!-- HTML ID -->
+        <iframe src="https://www.youtube.com/embed/uiXdwyKGEVw?si=o_l_0OfaTXbE2mcy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+  </div>
+  <script>
+    // episode select
+    function changeEpisode() {
+      const select = document.getElementById('episodeSelect');
+      const selectedValue = select.value;
+      window.location.href = selectedValue;
+    }
+  
+    window.onload = function() {
+      const select = document.getElementById('episodeSelect');
+      const currentURL = window.location.pathname;
+      const episode = currentURL.match(/(\d+)\.html/);
+  
+      if (episode) {
+        const episodeNumber = episode[1];
+        select.value = `${episodeNumber}.html`; 
+      }
+    };
+  </script>
+
+  <div class="button-s">
+      <button><a href="4.html">Sebelumnya</a></button>
+      <button onclick="alertWeb()"><a href="javascript:void(0)">Semua Episode</a></button>
+      <button><a href="6.html">Selanjutnya</a></button>
+      <br>
+  </div>
+  <br><br>
+  <div class="info-judul">
+    <h3>Detail Anime Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</h3>
+  </div>
+  <br>
+  <!-- HTML list -->
+  <div class="info-anime">
+    <ul>
+      <li><strong>Judul Anime:</strong> Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</li>
+      <li><strong>Judul Alternatif:</strong> Classroom of the Elite</li>
+      <li><strong>Jumlah Episode:</strong> 12</li>
+      <li><strong>Status:</strong> Finished Airing</li>
+      <li><strong>Musim Rilis:</strong> Summer 2017</li>
+      <li><strong>Studio:</strong> Lerche</li>
+      <li><strong>Genre:</strong> Drama, Suspense</li>
+      <li><strong>Durasi Episode:</strong> 24 menit</li>
+      <li><strong>Rating MyAnimeList:</strong> 7.85</li>
+      <li><a href="http://you-zitsu.com/1st/" target="_blank"><strong style="color: #004997;">Official Site</strong></a></li>
+    </ul>
+  </div>
+  <br>
+  <div class="info-info">
+    <h3>Informasi Anime Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</h3>
+  </div>
+  <br>
+  <div class="info-sinopsis">
+    <h2>Sinopsis Anime Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</h2>
+    <br id="br-sinop">
+    <p style="padding-bottom: 5px;">
+      On the surface, Koudo Ikusei Senior High School is a utopia. The students enjoy an unparalleled amount of freedom, and it is ranked highly in Japan. However, the reality is less than ideal. Four classes, A through D, are ranked in order of merit, and only the top classes receive favorable treatment.
+    </p>
+    <p style="padding-bottom: 5px;">
+      Kiyotaka Ayanokouji is a student of Class D, where the school dumps its worst. There he meets the unsociable Suzune Horikita, who believes she was placed in Class D by mistake and desires to climb all the way to Class A, and the seemingly amicable class idol Kikyou Kushida, whose aim is to make as many friends as possible.
+    </p>
+    <p>
+      While class membership is permanent, class rankings are not; students in lower ranked classes can rise in rankings if they score better than those in the top ones. Additionally, in Class D, there are no bars on what methods can be used to get ahead. In this cutthroat school, can they prevail against the odds and reach the top?
+    </p>
+    <br>
+    <p>[Written by <a href="https://myanimelist.net/anime/35507/Youkoso_Jitsuryoku_Shijou_Shugi_no_Kyoushitsu_e" target="_blank" style="color: #004997;"><strong>MAL</strong></a> Rewrite]</p>
+  </div>
+  <br>
+  <!-- Html table -->
+  <div class="info-off">
+    <h2>Karakter Anime Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</h2>
+    <div class="info-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Nama</th>
+            <th>Voice Actors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="../../img/img-anime/2/333108.jpg" alt="Foto Karakter Ayanokouji, Kiyotaka" id="img-anime"></td>
+            <td>Ayanokouji, Kiyotaka</td>
+            <td>Chiba, Shouya</td>
+          </tr>
+          <tr>
+            <td><img src="../../img/img-anime/2/333109.jpg" alt="Foto Karakter Horikita, Suzune" id="img-anime"></td>
+            <td>Horikita, Suzune</td>
+            <td>Kitou, Akari</td>
+          </tr>
+          <tr>
+            <td><img src="../../img/img-anime/2/333116.jpg" alt="Foto Karakter Karuizawa, Keiu" id="img-anime"></td>
+            <td>Karuizawa, Kei</td>
+            <td>Taketatsu, Ayana</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <!-- HTML Forms -->
+  <div class="comment">
+    <h2>Tinggalkan Kometar</h2>
+    <form class="comment-isi">
+      <textarea name="comment" placeholder="Komentar anda..." required></textarea>
+      <div class="isi">
+        <input type="text" name="name" placeholder="Nama *" required>
+        <input type="email" name="email" placeholder="Email *" required>
+      </div>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </div>
+  <br>
+</div>
+
+<!-- contact -->
+<section id="contact">
+  <div class="footer">
+    <div class="fjl">
+      <a href="#" style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text"><strong>Lossy</strong></a>
+    </div>
+    <div class="ftl">
+      <div class="ftl-c">
+        <h3>About</h3>
+        <p>
+          <a href="#about">About</a>
+          <a href="#galeri">Gallery</a>
+          <a href="#rekomen">Recommendation</a>
+        </p>
+      </div>
+      <div class="ftl-c">
+        <h3>Contact Us</h3>
+        <p>
+          <a href="https://www.instagram.com/firmanadit4249/" target="_blank">Instagram</a>
+          <a href="mailto:firmanadityawan@gmail.com" target="_blank">Email</a>
+          <a href="https://www.facebook.com/firman.adit.589/" target="_blank">Facebook</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- copyright -->
+<footer>
+  <div class="footer-c">
+     <p><strong>&copy; 2024 Lossy. All right reserved</strong></p>
+  </div>
+</footer>
+
+<!-- scroll up -->
+<div class="scroll">
+  <a href="#"><i data-feather="arrow-up-circle"></i></a>
+</div>
+
+  <!-- feather -->
+  <script>
+    feather.replace();
+  </script>
+
+<!-- Javascript -->
+  <script src="../../js/script.js"></script>
+</body>
+</html>

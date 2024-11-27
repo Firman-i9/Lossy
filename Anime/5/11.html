@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lossy | Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</title>
+  <!-- fav icon -->
+  <link rel="icon" href="../../img/favicon_io/favicon.ico" sizes="any">
+  <link rel="icon" href="../../img/favicon_io/favicon-32x32.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../img/favicon_io/apple-touch-icon.png">
+  <!--  style-->
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+<!--  fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Icon -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+<!--navbar-->
+<nav class="navbar" id="navbar-pages">
+  <a href="../../index.html" class="navbar-judul"><h1 style="background: linear-gradient(to right, #d0d3d4 15%, #d4ac0d 85%); color: transparent; background-clip: text"><em>Lossy</em></h1></a>
+
+  <div class="navbar-nav">
+    <a href="../../index.html">Home</a>
+    <a href="javascript:void(0)" class="dropdown">Anime List
+      <i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-list">
+      <a href="../1/1.html">Irozuku Sekai no Ashita kara</a>
+      <a href="../2/1.html">Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</a>
+      <a href="../3/1.html">Yuusha Party wo Tsuihou sareta Beast Tamer</a>
+      <a href="../4/1.html">Sasaki to Pii-chan</a>
+      <a href="javascript:void(0)">Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</a>
+    </div>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="navbar-extra" id="book-menu">
+    <a href="javascript:void(0)"><i data-feather="menu"></i></a>
+  </div>
+</nav>
+
+<script type="text/javascript">
+  var lastScrollTop = 0;
+      navbar = document.getElementById("navbar-pages");
+  window.addEventListener("scroll", function(){
+      var scrollTop = window.pageYOffset || document
+          .documentElement.scrollTop;
+      if (scrollTop > lastScrollTop){
+          navbar.style.top='-80px';
+      } else {
+          navbar.style.top="0";
+      }
+      lastScrollTop = scrollTop;
+  })
+</script>
+<!-- dropdown -->
+<script>
+  var dropdown = document.getElementsByClassName("dropdown");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+  </script>
+
+<!-- content -->
+ <!-- HTML Block in Line -->
+<div class="content">
+  <div class="content-judul">
+      <h1>Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san Episode 11 Subtitle Indonesia</h1>
+      <p>Posted by Anonymous</p>
+  </div>
+  <div class="player">
+      <div class="episode-select">
+          <select id="episodeSelect" onchange="changeEpisode()">
+            <option value="1.html">Episode 1</option>
+            <option value="2.html">Episode 2</option>
+            <option value="3.html">Episode 3</option>
+            <option value="4.html">Episode 4</option>
+            <option value="5.html">Episode 5</option>
+            <option value="6.html">Episode 6</option>
+            <option value="7.html">Episode 7</option>
+            <option value="8.html">Episode 8</option>
+            <option value="9.html">Episode 9</option>
+            <option value="10.html">Episode 10</option>
+            <option value="11.html">Episode 11</option>
+            <option value="12.html">Episode 12</option>
+          </select>
+      </div>
+      <!-- HTML Media -->
+      <div class="video-yt" id="yt"> <!-- HTML ID -->
+        <iframe src="https://www.youtube.com/embed/GrJGlF1yRao?si=0VP2fmCyIKczwQD6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+  </div>
+  <script>
+    // episode select
+    function changeEpisode() {
+      const select = document.getElementById('episodeSelect');
+      const selectedValue = select.value;
+      window.location.href = selectedValue;
+    }
+  
+    window.onload = function() {
+      const select = document.getElementById('episodeSelect');
+      const currentURL = window.location.pathname;
+      const episode = currentURL.match(/(\d+)\.html/);
+  
+      if (episode) {
+        const episodeNumber = episode[1];
+        select.value = `${episodeNumber}.html`; 
+      }
+    };
+  </script>
+
+  <div class="button-s">
+      <button><a href="10.html">Sebelumnya</a></button>
+      <button onclick="alertWeb()"><a href="javascript:void(0)">Semua Episode</a></button>
+      <button><a href="12.html">Selanjutnya</a></button>
+      <br>
+  </div>
+  <br><br>
+  <div class="info-judul">
+    <h3>Detail Anime Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</h3>
+  </div>
+  <br>
+  <!-- HTML list -->
+  <div class="info-anime">
+    <ul>
+      <li><strong>Judul Anime:</strong> Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</li>
+      <li><strong>Judul Alternatif:</strong> Alya Sometimes Hides Her Feelings in Russian</li>
+      <li><strong>Jumlah Episode:</strong> 12</li>
+      <li><strong>Status:</strong> FinisSummer 2024hed Airing</li>
+      <li><strong>Musim Rilis:</strong> Summer 2024</li>
+      <li><strong>Studio:</strong> Doga Kobo</li>
+      <li><strong>Genre:</strong> Comedy, Romance</li>
+      <li><strong>Durasi Episode:</strong> 24 menit</li>
+      <li><strong>Rating MyAnimeList:</strong> 7.64</li>
+      <li><a href="https://roshidere.com/" target="_blank"><strong style="color: #004997;">Official Site</strong></a></li>
+    </ul>
+  </div>
+  <br>
+  <div class="info-info">
+    <h3>Informasi Anime Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</h3>
+  </div>
+  <br>
+  <div class="info-sinopsis">
+    <h2>Sinopsis Anime Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</h2>
+    <br id="br-sinop">
+    <p style="padding-bottom: 5px;">
+      Seirei Academy is a prestigious school attended by the very best students in Japan. Alisa Mikhailovna "Alya" Kujou, the half-Russian and half-Japanese treasurer of the school's student council, is known for her intelligence, stunning looks, and rigid personality. Contrasting her near-flawless persona, Alya's unmotivated classmate Masachika Kuze slacks off during lessons and seems to show no interest in her.
+    </p>
+    <p style="padding-bottom: 5px;">
+      Initially irritated, Alya gradually becomes more intrigued by Masachika and starts expressing her affection for him in Russian. However, she is oblivious to his secret—he understands the language fluently! Due to a childhood friend who was temporarily staying in Japan, Masachika has been studying Russian in hopes of reuniting with her.
+    </p>
+    <p>
+      As the two spend more time together, the playful and eccentric relationship between them quickly deepens. In the meantime, both must learn to navigate their new growing feelings for one another.
+    </p>
+    <br>
+    <p>[Written by <a href="https://myanimelist.net/anime/54744/Tokidoki_Bosotto_Russia-go_de_Dereru_Tonari_no_Alya-san?cat=anime" target="_blank" style="color: #004997;"><strong>MAL</strong></a> Rewrite]</p>
+  </div>
+  <br>
+  <!-- Html table -->
+  <div class="info-off">
+    <h2>Karakter Anime Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</h2>
+    <div class="info-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Nama</th>
+            <th>Voice Actors</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="../../img/img-anime/5/493253.jpg" alt="Foto Karakter Kujou, Alisa Mikhailovna" id="img-anime"></td>
+            <td>Kujou, Alisa Mikhailovna</td>
+            <td>Uesaka, Sumire</td>
+          </tr>
+          <tr>
+            <td><img src="../../img/img-anime/5/536831.jpg" alt="Foto Karakter Kuze, Masachika" id="img-anime"></td>
+            <td>Kuze, Masachika</td>
+            <td>Amasaki, Kouhei</td>
+          </tr>
+          <tr>
+            <td><img src="../../img/img-anime/5/536833.jpg" alt="Foto Karakter Kujou, Maria Mikhailovna" id="img-anime"></td>
+            <td>Kujou, Maria Mikhailovna</td>
+            <td>Fujii, Yukiyo</td>
+          </tr>
+          <tr>
+            <td><img src="../../img/img-anime/5/559107.jpg" alt="Foto Karakter Suou, Yuki" id="img-anime"></td>
+            <td>Suou, Yuki</td>
+            <td>Maruoka, Wakana</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <!-- HTML Forms -->
+  <div class="comment">
+    <h2>Tinggalkan Kometar</h2>
+    <form class="comment-isi">
+      <textarea name="comment" placeholder="Komentar anda..." required></textarea>
+      <div class="isi">
+        <input type="text" name="name" placeholder="Nama *" required>
+        <input type="email" name="email" placeholder="Email *" required>
+      </div>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </div>
+  <br>
+</div>
+
+<!-- contact -->
+<section id="contact">
+  <div class="footer">
+    <div class="fjl">
+      <a href="#" style="background: linear-gradient(to right, #2e4053 15%, #d4ac0d 85%); color: transparent; background-clip: text"><strong>Lossy</strong></a>
+    </div>
+    <div class="ftl">
+      <div class="ftl-c">
+        <h3>About</h3>
+        <p>
+          <a href="#about">About</a>
+          <a href="#galeri">Gallery</a>
+          <a href="#rekomen">Recommendation</a>
+        </p>
+      </div>
+      <div class="ftl-c">
+        <h3>Contact Us</h3>
+        <p>
+          <a href="https://www.instagram.com/firmanadit4249/" target="_blank">Instagram</a>
+          <a href="mailto:firmanadityawan@gmail.com" target="_blank">Email</a>
+          <a href="https://www.facebook.com/firman.adit.589/" target="_blank">Facebook</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- copyright -->
+<footer>
+  <div class="footer-c">
+     <p><strong>&copy; 2024 Lossy. All right reserved</strong></p>
+  </div>
+</footer>
+
+<!-- scroll up -->
+<div class="scroll">
+  <a href="#"><i data-feather="arrow-up-circle"></i></a>
+</div>
+
+  <!-- feather -->
+  <script>
+    feather.replace();
+  </script>
+
+<!-- Javascript -->
+  <script src="../../js/script.js"></script>
+</body>
+</html>
